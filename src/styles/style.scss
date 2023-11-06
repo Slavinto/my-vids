@@ -1,0 +1,11 @@
+@use "../components/card";
+@use "../components/banner";
+@use "../components/storesSection";
+@use "coffee-store";
+@use "footer";
+@use "navigation";
+@use "defaults";
+
+.content {
+    width: 100%;
+}
