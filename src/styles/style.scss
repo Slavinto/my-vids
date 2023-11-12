@@ -1,11 +1,17 @@
-@use "../components/card";
-@use "../components/banner";
-@use "../components/storesSection";
-@use "coffee-store";
+// general
 @use "footer";
-@use "navigation";
 @use "defaults";
 
-.content {
-    width: 100%;
-}
+// pages
+@use "pages-index";
+
+// components
+@use "Banner.style";
+@use "Navbar.style";
+
+// .content {
+//     display: flex;
+//     flex-direction: column;
+//     align-self: center;
+//     width: 100%;
+// }

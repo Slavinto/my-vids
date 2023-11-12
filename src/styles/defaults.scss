@@ -65,3 +65,25 @@ button {
 section {
     @include p.section-mobile;
 }
+
+// ================================================
+// added in this project
+
+body {
+    background-color: p.$dark;
+}
+
+::-webkit-scrollbar {
+    width: 0rem;
+    background: transparent;
+}
+
+h1 {
+    font-weight: 800;
+}
+h2 {
+    font-weight: 700;
+}
+h3 {
+    font-weight: 600;
+}

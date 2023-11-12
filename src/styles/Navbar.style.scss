@@ -1,0 +1,14 @@
+@use "partials" as p;
+
+.nav {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+
+    background-color: p.$darkOverlay2;
+
+    &__logo {
+        background-color: p.$formOverlay1;
+        @include p.hero-header;
+    }
+}

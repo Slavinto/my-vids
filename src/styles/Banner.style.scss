@@ -1,0 +1,27 @@
+@use "partials" as p;
+
+.banner {
+    height: 76rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+    gap: 5rem;
+
+    &__title {
+        @include p.section-header;
+        z-index: 1;
+    }
+    &__subtitle {
+        @include p.article-header;
+        z-index: 1;
+    }
+    &__background-image__container {
+    }
+    &__background-image {
+        @include p.center-absolute;
+        @include p.adaptive;
+        z-index: 0;
+    }
+}

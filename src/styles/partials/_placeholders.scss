@@ -87,6 +87,7 @@
 
 @mixin wrapper {
     width: v.$wrapper-width + rem;
+
     margin: 0 auto;
     position: relative;
     overflow: hidden;
@@ -101,7 +102,7 @@
         position: absolute;
         top: 0;
         z-index: -1;
-        width: v.$wrapper-width;
+        width: v.$wrapper-width + rem;
         height: 68.3rem;
         @include m.background(v.$headerBg);
     }
