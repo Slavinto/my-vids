@@ -6,7 +6,7 @@
 @mixin btn {
     display: flex;
     padding: 2rem 9rem;
-    background-color: c.$active;
+    background-color: c.$red10;
 
     @include m.mq(tablet-wide, max) {
         align-self: center;
@@ -42,6 +42,18 @@
 /*===========================================*/
 // Custom pattern styling classes
 /*===========================================*/
+@mixin link {
+    &:link,
+    &:visited {
+        color: c.$white;
+        transform: all 0.3s ease-out;
+    }
+    &:hover,
+    &:active {
+        color: c.$white30;
+        cursor: pointer;
+    }
+}
 
 @mixin section-mobile {
     @include m.mq(tablet-wide, max) {

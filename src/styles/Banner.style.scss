@@ -2,21 +2,54 @@
 
 .banner {
     height: 76rem;
+    width: 100%;
 
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-self: stretch;
-    gap: 5rem;
+    align-items: center;
+
+    &__details {
+        max-width: 36rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+    }
 
     &__title {
-        @include p.section-header;
+        @include p.form-header;
+        color: p.$white;
         z-index: 1;
     }
     &__subtitle {
-        @include p.article-header;
+        @include p.hero-text;
         z-index: 1;
     }
+    &__cta {
+        z-index: 1;
+        @include p.cta;
+        @include p.btn;
+        gap: 0.2rem;
+        align-items: center;
+        align-self: flex-start;
+        color: p.$white;
+
+        span {
+            margin-right: 1rem;
+        }
+
+        &:link,
+        &:visited {
+            transition: all 0.3s ease-out;
+        }
+        &:hover,
+        &:active {
+            background-color: p.$red20;
+        }
+    }
+    &__play-icon {
+        color: p.$white;
+    }
+
     &__background-image__container {
     }
     &__background-image {

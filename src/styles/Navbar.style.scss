@@ -2,13 +2,43 @@
 
 .nav {
     width: 100%;
+    padding: 0.4rem 4rem;
     position: absolute;
     z-index: 1;
 
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+
     background-color: p.$darkOverlay2;
+    @include p.form-text-light;
 
     &__logo {
-        background-color: p.$formOverlay1;
-        @include p.hero-header;
+        &-link {
+        }
+        &-img {
+        }
     }
+
+    &__list {
+        &-item {
+            @include p.link;
+        }
+    }
+
+    &__user {
+        &-actions {
+            margin-left: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @include p.link;
+    }
+
+    &__sign-out {
+        @include p.link;
+    }
+
+    color: p.$white;
 }

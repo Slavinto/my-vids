@@ -18,7 +18,7 @@ export default function Home() {
                 <link rel='icon' href='/favicon.ico' />
             </Head>
             <div className='_wrapper'>
-                <Navbar />
+                <Navbar username={"slava3669@gmail.com"} />
                 <Banner
                     title='Clifford the red dog'
                     subTitle='a very cute dog'
