@@ -2,16 +2,21 @@
 
 .nav {
     width: 100%;
-    padding: 0.4rem 4rem;
-    position: absolute;
+    position: fixed;
+    top: 0;
     z-index: 1;
-
-    display: flex;
-    align-items: center;
-    gap: 4rem;
-
-    background-color: p.$darkOverlay2;
+    background: linear-gradient(p.$darkOverlay, p.$darkOverlay3);
     @include p.form-text-light;
+
+    &__container {
+        max-width: p.$wrapper-width + rem;
+        margin: 0rem auto;
+        align-self: center;
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+        padding: 0.4rem 4rem;
+    }
 
     &__logo {
         &-link {
@@ -21,23 +26,48 @@
     }
 
     &__list {
+        display: flex;
+        gap: 4rem;
         &-item {
             @include p.link;
         }
     }
 
     &__user {
-        &-actions {
-            margin-left: auto;
+        position: relative;
+        display: flex;
+        align-items: center;
+        @include p.link;
+
+        &-container {
             display: flex;
             flex-direction: column;
+            margin-left: auto;
         }
 
-        @include p.link;
-    }
+        &:focus {
+            ~ .nav__user-signout {
+                transform: translate(-4rem, 1.5rem);
+                top: 8rem;
+            }
+        }
 
-    &__sign-out {
-        @include p.link;
+        &-icon {
+        }
+
+        &-signout {
+            @include p.cta;
+            @include p.btn;
+            @include p.link;
+            position: absolute;
+            transform: translate(-4rem, -12rem);
+            transition: all 1s ease-in-out;
+            background-color: p.$black20;
+            &:focus {
+                top: 21.4rem;
+                transition: none;
+            }
+        }
     }
 
     color: p.$white;

@@ -50,9 +50,19 @@
         color: p.$white;
     }
 
-    &__background-image__container {
-    }
     &__background-image {
+        &__container {
+            width: p.$wrapper-width + rem;
+            height: 100%;
+            @include p.center-absolute;
+        }
+        &__overlay {
+            width: 100%;
+            height: 100%;
+            @include p.overlay(p.$darkOverlay3);
+            z-index: 1;
+        }
+
         @include p.center-absolute;
         @include p.adaptive;
         z-index: 0;

@@ -29,6 +29,7 @@ const Banner = (props) => {
                 </Link>
             </article>
             <div className='banner__background-image__container'>
+                <div className='banner__background-image__overlay'></div>
                 <Image
                     className='banner__background-image'
                     src={props.imgUrl}

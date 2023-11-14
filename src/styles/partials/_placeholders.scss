@@ -46,13 +46,14 @@
     &:link,
     &:visited {
         color: c.$white;
-        transform: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
     }
     &:hover,
     &:active {
         color: c.$white30;
         cursor: pointer;
     }
+    @include pt.hero-text;
 }
 
 @mixin section-mobile {
