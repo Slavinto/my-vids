@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Banner from "@/components/Banner.component";
 import Navbar from "@/components/Navbar.component";
+import Card from "@/components/Card.component";
+import Cards from "@/components/Cards.component";
 
 export default function Home() {
     return (
@@ -22,8 +24,24 @@ export default function Home() {
                 <Banner
                     title='Clifford the red dog'
                     subTitle='a very cute dog'
-                    imgUrl={"/static/clifford.jpg"}
                 />
+                <section className='all-cards _container'>
+                    <Cards>
+                        <Card size='large' />
+                        <Card size='large' />
+                        <Card size='large' />
+                    </Cards>
+                    <Cards>
+                        <Card size='medium' />
+                        <Card size='medium' />
+                        <Card size='medium' />
+                    </Cards>
+                    <Cards>
+                        <Card size='small' />
+                        <Card size='small' />
+                        <Card size='small' />
+                    </Cards>
+                </section>
             </div>
         </>
     );

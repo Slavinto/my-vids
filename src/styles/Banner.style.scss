@@ -1,7 +1,9 @@
 @use "partials" as p;
 
+$bannerHeight: 76rem;
+
 .banner {
-    height: 76rem;
+    height: $bannerHeight;
     width: 100%;
 
     display: flex;
@@ -53,8 +55,11 @@
     &__background-image {
         &__container {
             width: p.$wrapper-width + rem;
-            height: 100%;
-            @include p.center-absolute;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: $bannerHeight;
+            overflow: hidden;
         }
         &__overlay {
             width: 100%;

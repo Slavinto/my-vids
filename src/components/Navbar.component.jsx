@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -19,15 +19,20 @@ const Navbar = (props) => {
         router.push("/browse/my-list");
     };
 
+    const handleClickUser = (e) => {
+        e.preventDefault();
+        setShowUserSignout(!showUserSignout);
+    };
+
     return (
-        <section className='nav'>
+        <section className='nav _container-plus'>
             <div className='nav__container'>
                 <Link className='nav__logo-link' href={"#"}>
                     <Image
                         className='nav__logo-img'
                         src={"/static/icons/netflix-logo.svg"}
-                        width={80}
-                        height={80}
+                        width={70}
+                        height={70}
                         alt='netflix logo'
                     />
                 </Link>
@@ -42,7 +47,11 @@ const Navbar = (props) => {
                     </li>
                 </ul>
                 <div className='nav__user-container'>
-                    <Link href={"#"} className='nav__user'>
+                    <Link
+                        href={"#"}
+                        onClick={handleClickUser}
+                        className='nav__user'
+                    >
                         {username}
                         <Image
                             className='nav__user-icon'
@@ -52,9 +61,11 @@ const Navbar = (props) => {
                             height={24}
                         />
                     </Link>
-                    <Link href={"/login"} className='nav__user-signout'>
-                        <span>Sign Out</span>
-                    </Link>
+                    {showUserSignout && (
+                        <Link href={"/login"} className='nav__user-signout'>
+                            <span>Sign Out</span>
+                        </Link>
+                    )}
                 </div>
             </div>
         </section>
