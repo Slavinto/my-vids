@@ -1,0 +1,848 @@
+{
+    "items": [
+        {
+            "kind": "youtube#searchResult",
+            "etag": "ynRw5lg6H2MJBpP0vHZAAz_Wcjg",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "8hNfpjrhCro"
+            },
+            "snippet": {
+                "publishedAt": "2023-11-16T17:00:07Z",
+                "channelId": "UCnJ0mt5Cgx4ER_LhTijG_4A",
+                "title": "Whats The Call | SURF | VANS",
+                "description": "This film is an intimate look at the Vans surf team on the north shore of Hawaii during January of 2023. It's about the cultural ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/8hNfpjrhCro/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/8hNfpjrhCro/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/8hNfpjrhCro/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Vans",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-11-16T17:00:07Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "NApOA8EzcK1pYZUCqtchIG2nTjw",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "ma67yOdMQfs"
+            },
+            "snippet": {
+                "publishedAt": "2021-01-23T17:00:15Z",
+                "channelId": "UC--3c8RqSfAqYBdDjIG3UNA",
+                "title": "These Were The All-Time Surfing Moments Of The Year | Best Of 2020",
+                "description": "Well, that was a weird ride. Though it hasn't been easy, at least when we fixed our gaze on the ocean — or favorite place in the ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/ma67yOdMQfs/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/ma67yOdMQfs/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/ma67yOdMQfs/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Red Bull Surfing",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-01-23T17:00:15Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "g5psR4YTj27JRMbryCKIpBpfHlQ",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "DUC4nsq_s5k"
+            },
+            "snippet": {
+                "publishedAt": "2023-11-16T15:54:28Z",
+                "channelId": "UCbHktl0IyojB4I5mJ7XPZjA",
+                "title": "When Aussie Legends Rip Sunset Beach I Raw Days",
+                "description": "sunsetbeach #banzaipipeline #pipeline #northshore #surfing #surfingwaves When Surfing Legends Rip Sunset Beach. Back at ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/DUC4nsq_s5k/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/DUC4nsq_s5k/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/DUC4nsq_s5k/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Oahu Surf Films",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-11-16T15:54:28Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "e0H5x-rZzSLqEi6ZJOQ9qhxDpLM",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "rvplILF7zME"
+            },
+            "snippet": {
+                "publishedAt": "2023-11-13T19:00:31Z",
+                "channelId": "UCo_q6aOlvPH7M-j_XGWVgXg",
+                "title": "MASSIVE SWELL SLAMS THE NORTH SHORE XXL",
+                "description": "STAY PSYCHED MERCHANDISE: https://staypsyched.com - JAMIE O'BRIEN SURF SCHOOL: ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/rvplILF7zME/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/rvplILF7zME/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/rvplILF7zME/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Jamie O'Brien",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-11-13T19:00:31Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "PtMUQ0pbygvmav3aV4noV-5ttpE",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "XIXdn9H4H34"
+            },
+            "snippet": {
+                "publishedAt": "2023-11-16T23:38:08Z",
+                "channelId": "UChuLeaTGRcfzo0UjL-2qSbQ",
+                "title": "Watch LIVE O&#39;Neill Cold Water Classic - Day 2",
+                "description": "The iconic O'Neill Cold Water Classic returns to the renowned wave of Steamer Lane beginning November 15 - 19. Steamer Lane ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/XIXdn9H4H34/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/XIXdn9H4H34/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/XIXdn9H4H34/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "World Surf League",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-11-16T23:38:08Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "7jH7r6i1sf20uhuWUUnUr7b0FGQ",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "xtHZKToMvus"
+            },
+            "snippet": {
+                "publishedAt": "2022-11-02T17:46:49Z",
+                "channelId": "UCTYHNSWYy4jCSCj1Q1Fq0ew",
+                "title": "Interlusion | A Billabong Surf Film Shot in the Mentawai Islands",
+                "description": "Welcome to the Interlusion. What happens when the best surf trip of former world champ Joel Parkinson's life happens years after ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/xtHZKToMvus/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/xtHZKToMvus/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/xtHZKToMvus/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Billabong",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-11-02T17:46:49Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "PNWsfE9WO3BbSqZXHxxChMrrDic",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "eSWST13stO4"
+            },
+            "snippet": {
+                "publishedAt": "2022-03-27T15:00:32Z",
+                "channelId": "UCVo06dBGK9VBBhq15wJxZHQ",
+                "title": "🔵4k (ASMR) 10 Hour Store Loop - Hawaii Surfing - With Relaxing Music☑️",
+                "description": "Waves of the World Filmers: Chris Kincade: https://www.instagram.com/chriskincade.wotw Andre Botha: ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/eSWST13stO4/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/eSWST13stO4/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/eSWST13stO4/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Waves of the World",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-03-27T15:00:32Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "TXqNeaEKtMA78rd8XLCXcLm1aQU",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "zZqxPozl2Ec"
+            },
+            "snippet": {
+                "publishedAt": "2023-01-24T07:00:09Z",
+                "channelId": "UCEUYW6zm6KnUxPcwY1D8HsQ",
+                "title": "Surfing Massive Waves Waimea Bay (Jan 22, 2023)  4K",
+                "description": "What occurred on January 22, 2023, at Waimea Bay on the North Shore of Oahu is nothing short of historical. We're simply doing ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/zZqxPozl2Ec/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/zZqxPozl2Ec/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/zZqxPozl2Ec/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Eimy’s Hawaii Happy life 🏄🏻",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-01-24T07:00:09Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "JzkzP9aVj7oUx0VWuPclJVTasH8",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "FPJ_G0OxNso"
+            },
+            "snippet": {
+                "publishedAt": "2023-11-01T06:30:04Z",
+                "channelId": "UCoicMEw3njXscfwHlaAJVcQ",
+                "title": "SURFING UP THE COAST IN MAGICAL WATER! (SURF VLOG)",
+                "description": "I went up north again in my van! Here's some POV and beach footage from the first day Video #2 is dropping later this week!",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/FPJ_G0OxNso/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/FPJ_G0OxNso/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/FPJ_G0OxNso/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Surfing With Noz",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-11-01T06:30:04Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "ZPTsqTRpFJVZfXPdn7y1BWh6_rw",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "hBtjJA3Vs0w"
+            },
+            "snippet": {
+                "publishedAt": "2023-11-17T08:46:01Z",
+                "channelId": "UChuLeaTGRcfzo0UjL-2qSbQ",
+                "title": "WATCH LIVE: Siheung Korea Open - Day 1",
+                "description": "Watch all the action LIVE from Siheung, Gyeonggi-Do, Korea! #WSL.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/hBtjJA3Vs0w/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/hBtjJA3Vs0w/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/hBtjJA3Vs0w/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "World Surf League",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-11-17T08:46:01Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "iYt9sKjxm3HZBarsmNb107W8_Nc",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "a48-c7kCdYI"
+            },
+            "snippet": {
+                "publishedAt": "2023-08-31T08:00:08Z",
+                "channelId": "UCoicMEw3njXscfwHlaAJVcQ",
+                "title": "SURFING A GLASSY REEF BREAK! (4K POV)",
+                "description": "In this video, we went and surfed one of our favourite reef breaks! It got super glassy Then we went for a skate at the bowl For ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/a48-c7kCdYI/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/a48-c7kCdYI/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/a48-c7kCdYI/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Surfing With Noz",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-08-31T08:00:08Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "9Hd_INkTHNzmM6h_go87TtjLvLg",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "v1IEFUt5Dlo"
+            },
+            "snippet": {
+                "publishedAt": "2023-10-26T19:30:04Z",
+                "channelId": "UCx18ywTcohtS9lpNXt8noWQ",
+                "title": "The Best Surfing Moments",
+                "description": "via https://www.tiktok.com/@moderndaymama1) (via https://www.tiktok.com/@swagstaff_22 (via ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/v1IEFUt5Dlo/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/v1IEFUt5Dlo/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/v1IEFUt5Dlo/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Omar Raja - ESPN",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-10-26T19:30:04Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "kRAnGeRI5I_mtanO1-baY7yP5S4",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "xgigr_sA5aU"
+            },
+            "snippet": {
+                "publishedAt": "2023-11-08T18:00:01Z",
+                "channelId": "UChuLeaTGRcfzo0UjL-2qSbQ",
+                "title": "Laura Enever Sets New GUINNESS WORLD RECORDS™ Title for Largest wave surfed paddle-in (female)",
+                "description": "Laura Enever's Record-Setting Ride Measured at 43.6 Feet (13.3 Meters). Laura Enever, who is 31 years old and from North ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/xgigr_sA5aU/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/xgigr_sA5aU/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/xgigr_sA5aU/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "World Surf League",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-11-08T18:00:01Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "J9hnXcSak2gMsWMjpKfGjiEjaNM",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "2ERgmSIx9gk"
+            },
+            "snippet": {
+                "publishedAt": "2023-11-06T19:00:01Z",
+                "channelId": "UCo_q6aOlvPH7M-j_XGWVgXg",
+                "title": "PIPELINE IS PUMPING (EARLY SEASON SWELLS HIT HAWAII)",
+                "description": "STAY PSYCHED MERCHANDISE: https://staypsyched.com - JAMIE O'BRIEN SURF SCHOOL: ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/2ERgmSIx9gk/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/2ERgmSIx9gk/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/2ERgmSIx9gk/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Jamie O'Brien",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-11-06T19:00:01Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "l2gg2dr_5VNDODZRtHcG32qxTYQ",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "8pmO46pMtwM"
+            },
+            "snippet": {
+                "publishedAt": "2023-10-26T11:00:06Z",
+                "channelId": "UCzcQOTuXYGuCvTekySb_CeQ",
+                "title": "September Long Edition - Bali 2023",
+                "description": "September delivered plenty of medium to solid swells with enough SE trades to keep Uluwatu clean and organized. Canggu had ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/8pmO46pMtwM/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/8pmO46pMtwM/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/8pmO46pMtwM/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Surfers of Bali",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-10-26T11:00:06Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "lODPB7bDzZZkqkl5e9U9BvEdgQk",
+            "id": {
+                "kind": "youtube#channel",
+                "channelId": "UCKo-NbWOxnxBnU41b-AoKeA"
+            },
+            "snippet": {
+                "publishedAt": "2005-11-02T06:29:47Z",
+                "channelId": "UCKo-NbWOxnxBnU41b-AoKeA",
+                "title": "SURFER",
+                "description": "We founded SURFER Magazine with a mission: to bring our readers a slice of the entire surfing world with each issue. And for ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://yt3.ggpht.com/ytc/APkrFKZ-np-yARBgheBv4Ftp-JmKtBCGn-R9xRkQYzybVKw=s88-c-k-c0xffffffff-no-rj-mo"
+                    },
+                    "medium": {
+                        "url": "https://yt3.ggpht.com/ytc/APkrFKZ-np-yARBgheBv4Ftp-JmKtBCGn-R9xRkQYzybVKw=s240-c-k-c0xffffffff-no-rj-mo"
+                    },
+                    "high": {
+                        "url": "https://yt3.ggpht.com/ytc/APkrFKZ-np-yARBgheBv4Ftp-JmKtBCGn-R9xRkQYzybVKw=s800-c-k-c0xffffffff-no-rj-mo"
+                    }
+                },
+                "channelTitle": "SURFER",
+                "liveBroadcastContent": "upcoming",
+                "publishTime": "2005-11-02T06:29:47Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "pl6M23Kfcl33ZlOu51hrLWj8tAA",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "5qsHU88dwuI"
+            },
+            "snippet": {
+                "publishedAt": "2023-09-21T03:00:06Z",
+                "channelId": "UCc-oOp182_mo5TicquwUVoA",
+                "title": "Surfing with his son on his back!❤️😲",
+                "description": "shorts Surfing with his child on his back!❤️   (clip via; billykemper on instagram) - : To submit your own content, please reach ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/5qsHU88dwuI/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/5qsHU88dwuI/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/5qsHU88dwuI/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Wiry",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-09-21T03:00:06Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "Y2xJ14sQV_1Awk-Jh_fH0jZDZLk",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "ccSjqzlJmJ4"
+            },
+            "snippet": {
+                "publishedAt": "2023-10-30T19:00:17Z",
+                "channelId": "UCo_q6aOlvPH7M-j_XGWVgXg",
+                "title": "EVERY SURFERS WORST NIGHTMARE AT PIPELINE!",
+                "description": "A fun episode of surfing, massive pipeline with John, John Florence and friends nothing like an early season swell to start off the ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/ccSjqzlJmJ4/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/ccSjqzlJmJ4/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/ccSjqzlJmJ4/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Jamie O'Brien",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-10-30T19:00:17Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "6x2hZo2q0iGYYwpUwfoCAm7o-Z0",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "xbFNjMTlvz0"
+            },
+            "snippet": {
+                "publishedAt": "2023-11-12T15:30:21Z",
+                "channelId": "UCzmxGGgSDALb59uiMFyt7AQ",
+                "title": "Giant Waves This 11 November, Hossegor !! The MOST Big SURFING",
+                "description": "Découvrez l'incroyable journée de surf du 11 novembre à Hossegor Une session épique avec des vagues énormes sur le spot de ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/xbFNjMTlvz0/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/xbFNjMTlvz0/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/xbFNjMTlvz0/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "SURF FRANCE HOSSEGOR-CAPBRETON",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-11-12T15:30:21Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "643fc1b5CIkDTJwTo_RenccqcQA",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "hCMdVywETkU"
+            },
+            "snippet": {
+                "publishedAt": "2023-08-21T19:00:19Z",
+                "channelId": "UCo_q6aOlvPH7M-j_XGWVgXg",
+                "title": "SURFING SKELETON BAY WITH KELLY SLATER &amp; EVERY PRO SURFER ON THE PLANET OF EARTH!",
+                "description": "STAY PSYCHED MERCHANDISE: https://staypsyched.com - JAMIE O'BRIEN SURF SCHOOL: ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/hCMdVywETkU/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/hCMdVywETkU/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/hCMdVywETkU/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Jamie O'Brien",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-08-21T19:00:19Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "IvoqtcuI1tXQLzUZXVQm7pAbFLQ",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "bJpa_60UlNE"
+            },
+            "snippet": {
+                "publishedAt": "2023-01-23T03:29:18Z",
+                "channelId": "UC4i3-yfVazfuqwoz71T79Sw",
+                "title": "The 2023 Eddie Aikau Big Wave Invitational at Waimea Bay",
+                "description": "World's most iconic big-wave event returns to Waimea Bay. WHAT ARE WE WATCHING? The word “unique” is thrown around a ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/bJpa_60UlNE/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/bJpa_60UlNE/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/bJpa_60UlNE/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Surfline",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-01-23T03:29:18Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "5Kyc5Dx_U0jUkShtcp1ljPz1KsU",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "3IuW1CDzRtA"
+            },
+            "snippet": {
+                "publishedAt": "2023-11-01T07:03:03Z",
+                "channelId": "UC3DIR1s_jw1wr4p4wWg7JGQ",
+                "title": "SUPER SHALLOW ON THE SUPERBANK",
+                "description": "Rainbow Bay is usually a friendly section of the Superbank, however on this day it was breaking in 1 ft water and there was no ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/3IuW1CDzRtA/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/3IuW1CDzRtA/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/3IuW1CDzRtA/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Raw Surfing",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-11-01T07:03:03Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "wF2VHT5-7rWa6IL2LxhTxYSLyqA",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "pBFAJEO19xc"
+            },
+            "snippet": {
+                "publishedAt": "2023-10-23T11:00:40Z",
+                "channelId": "UCOtHosOqPe9d6vLy-8LfHzQ",
+                "title": "RAW DAYS | Mavericks, California | Best Big Wave Surfing Sessions",
+                "description": "Mind Surf Trip to Mavericks, Half Moon Bay, California. \"RAW DAYS\" is a NobodySurf Original video series featuring a day in the ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/pBFAJEO19xc/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/pBFAJEO19xc/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/pBFAJEO19xc/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "NobodySurf : Surfing Videos",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-10-23T11:00:40Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "PYqw0ZTOmz42X98FcWkGIMCh3po",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "Iuy69BMHESM"
+            },
+            "snippet": {
+                "publishedAt": "2023-05-10T19:00:13Z",
+                "channelId": "UCVo06dBGK9VBBhq15wJxZHQ",
+                "title": "🔴(ASMR) Teahupoo: The Ultimate Surfing Experience - April 2023",
+                "description": "Welcome to Waves of the World We are not your typical surfing channel. Our dedicated filmers from around the world produce the ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/Iuy69BMHESM/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/Iuy69BMHESM/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/Iuy69BMHESM/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Waves of the World",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-05-10T19:00:13Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "zFO3dTykTM8ov_DaFYdc3uYF3Mg",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "hn-D9b2aIVI"
+            },
+            "snippet": {
+                "publishedAt": "2023-10-22T00:11:37Z",
+                "channelId": "UCEEakbvJcnji3llHKYxIQsA",
+                "title": "Surfing Pipeline Massive Opening Day Swell 2023 | EPIC PIPELINE MAX XII | DAY 12",
+                "description": "Giant 1st Swell of Winter Season | Epic Pipeline Max Check out Timecodes below: Wave Explodes on Jamie O'Brien Pipeline XXL ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/hn-D9b2aIVI/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/hn-D9b2aIVI/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/hn-D9b2aIVI/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "SwellPatrol",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-10-22T00:11:37Z"
+            }
+        }
+    ]
+}

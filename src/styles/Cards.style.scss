@@ -10,5 +10,25 @@
 .cards {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2rem;
+
+    &__title {
+        @include p.form-text-light;
+        font-size: 2.5rem;
+    }
+    &__wrapper {
+        width: 100%;
+        padding: 2rem 0rem;
+        overflow-x: scroll;
+        overflow-y: hidden;
+
+        display: flex;
+        align-items: center;
+    }
+    &__container {
+        width: 100%;
+        display: flex;
+        gap: 0.3rem;
+    }
 }

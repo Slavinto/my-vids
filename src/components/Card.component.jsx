@@ -1,11 +1,12 @@
 import { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { motion } from "framer-motion";
 
 const defaultImgUrl =
     "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1459&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
-const Card = ({ imgUrl = defaultImgUrl, size = "medium" }) => {
+const Card = ({ sideEl, imgUrl = defaultImgUrl, size = "medium" }) => {
     const router = useRouter();
     const [imgPath, setImgPath] = useState(imgUrl);
 
@@ -20,6 +21,7 @@ const Card = ({ imgUrl = defaultImgUrl, size = "medium" }) => {
         setImgPath(defaultImgUrl);
     };
 
+    const scale = sideEl ? { scaleY: 1.1 } : { scale: 1.1 };
     let width = 0;
     let height = 0;
 
@@ -45,7 +47,11 @@ const Card = ({ imgUrl = defaultImgUrl, size = "medium" }) => {
     }
 
     return (
-        <div className='card' onClick={handleClickCard}>
+        <motion.div
+            whileHover={{ ...scale }}
+            className='card'
+            onClick={handleClickCard}
+        >
             <figure className={`card__image-container -${size}`}>
                 <Image
                     src={imgPath}
@@ -56,7 +62,7 @@ const Card = ({ imgUrl = defaultImgUrl, size = "medium" }) => {
                     height={height}
                 />
             </figure>
-        </div>
+        </motion.div>
     );
 };
 
