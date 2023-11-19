@@ -1,6 +1,7 @@
 import Card from "./Card.component";
 
-const Cards = ({ sectionTitle, cardSize, videoArr }) => {
+const Cards = ({ sectionTitle, cardSize, videoArr = [] }) => {
+    if (videoArr.length === 0) return <h1>Error fetching youtube data</h1>;
     const outputJsx = videoArr.map((videoObj, idx) => {
         return (
             <Card

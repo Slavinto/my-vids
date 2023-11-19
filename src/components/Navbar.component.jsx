@@ -25,8 +25,8 @@ const Navbar = (props) => {
     };
 
     return (
-        <section className='nav _container-plus'>
-            <div className='nav__container'>
+        <section className='nav'>
+            <div className='nav__container _container-plus'>
                 <Link className='nav__logo-link' href={"#"}>
                     <Image
                         className='nav__logo-img'

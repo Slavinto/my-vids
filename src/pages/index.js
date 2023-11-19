@@ -5,9 +5,37 @@ import Cards from "@/components/Cards.component";
 
 import { getVideos } from "../../lib/videos";
 
-const videoArr = getVideos();
+export async function getServerSideProps() {
+    const queries = [
+        "Disney trailers",
+        "Travel blog",
+        "videos for increasing Productivity",
+        "Popular videos for today",
+    ];
+    const disneyVideos = await getVideos("Disney trailers");
+    const travelVideos = await getVideos("Travel blog");
+    const productivityVideos = await getVideos(
+        "videos for increasing Productivity"
+    );
+    const popularVideos = await getVideos("Popular videos for today");
+    console.log({ disneyVideos });
+    return {
+        props: {
+            disneyVideos,
+            travelVideos,
+            productivityVideos,
+            popularVideos,
+        },
+    };
+}
 
-export default function Home() {
+export default function Home({
+    disneyVideos,
+    travelVideos,
+    productivityVideos,
+    popularVideos,
+}) {
+    // console.log({ ...disneyVideos });
     return (
         <>
             <Head>
@@ -31,17 +59,27 @@ export default function Home() {
                 <Cards
                     sectionTitle='Disney'
                     cardSize={"large"}
-                    videoArr={videoArr}
+                    videoArr={disneyVideos}
                 />
-                <Cards
+                {/* <Cards
                     sectionTitle='Watch it again'
-                    cardSize={"medium"}
-                    videoArr={videoArr}
+                    cardSize={"small"}
+                    videoArr={videoArr[1]}
+                /> */}
+                <Cards
+                    sectionTitle='Travel'
+                    cardSize={"small"}
+                    videoArr={travelVideos}
                 />
                 <Cards
-                    sectionTitle='Favourites'
+                    sectionTitle='Productivity'
+                    cardSize={"medium"}
+                    videoArr={productivityVideos}
+                />
+                <Cards
+                    sectionTitle='Popular'
                     cardSize={"small"}
-                    videoArr={videoArr}
+                    videoArr={popularVideos}
                 />
             </div>
         </>

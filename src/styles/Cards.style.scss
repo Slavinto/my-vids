@@ -1,12 +1,5 @@
 @use "partials" as p;
 
-.all-cards {
-    margin: 8rem 0rem;
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-}
-
 .cards {
     width: 100%;
     display: flex;
@@ -24,7 +17,6 @@
         overflow-y: hidden;
 
         display: flex;
-        align-items: center;
     }
     &__container {
         width: 100%;
