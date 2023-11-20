@@ -3,22 +3,30 @@ import Banner from "@/components/Banner.component";
 import Navbar from "@/components/Navbar.component";
 import Cards from "@/components/Cards.component";
 
-import { getVideos } from "../../lib/videos";
+import {
+    getVideos,
+    getPopularVideos,
+    getOfflineVideos,
+} from "../../lib/videos";
 
 export async function getServerSideProps() {
-    const queries = [
-        "Disney trailers",
-        "Travel blog",
-        "videos for increasing Productivity",
-        "Popular videos for today",
-    ];
-    const disneyVideos = await getVideos("Disney trailers");
-    const travelVideos = await getVideos("Travel blog");
-    const productivityVideos = await getVideos(
+    //==============================================
+    // temporary get videos from files solution
+    const disneyVideos = getOfflineVideos("Disney trailers");
+    const travelVideos = getOfflineVideos("Travel blog");
+    const productivityVideos = getOfflineVideos(
         "videos for increasing Productivity"
     );
-    const popularVideos = await getVideos("Popular videos for today");
-    console.log({ disneyVideos });
+    const popularVideos = getOfflineVideos("Popular videos for today");
+    //==============================================
+
+    // const disneyVideos = await getVideos("Disney trailers");
+    // const travelVideos = await getVideos("Travel blog");
+    // const productivityVideos = await getVideos(
+    //     "videos for increasing Productivity"
+    // );
+    // const popularVideos = await getPopularVideos();
+
     return {
         props: {
             disneyVideos,
