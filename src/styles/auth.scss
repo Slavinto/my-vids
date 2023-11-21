@@ -1,0 +1,74 @@
+@use "partials" as p;
+
+.auth {
+    margin: 0 auto;
+    &__bg {
+        @include p.bg;
+
+        &-overlay {
+            @include p.overlay(p.$gray30);
+            z-index: 1;
+        }
+        &-img {
+        }
+    }
+
+    &__header {
+        width: 100%;
+        display: flex;
+    }
+    &__logo-link {
+        padding: 2rem;
+    }
+}
+
+.form {
+    display: flex;
+    width: 40rem;
+    // height: 30rem;
+    border-radius: 2rem;
+    padding: 4rem;
+    align-items: center;
+    @include p.background(p.$black20);
+
+    &__title {
+        @include p.form-header;
+        text-transform: none;
+        line-height: 2.2rem;
+        color: p.$white;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        width: 100%;
+    }
+
+    &__email {
+        @include p.hero-text;
+        color: black;
+        padding: 1rem;
+        font-size: 2.7rem;
+        line-height: 2.2rem;
+        border: none;
+    }
+
+    &__message {
+        @include p.form-text-light;
+    }
+
+    &__btn {
+        @include p.cta;
+        @include p.btn;
+        width: 100%;
+        color: p.$white;
+        border: none;
+        justify-content: center;
+        border-radius: 0.5rem;
+        cursor: pointer;
+
+        &-container {
+        }
+    }
+}

@@ -132,9 +132,15 @@
 // Wrapper class
 ._wrapper {
     @include placeholders.wrapper;
-    @include m.background("/static/background.png");
 
+    // @include m.background("/static/background.png");
     // @include m.background(c.$dark);
     // @include m.background(rgba(255, 255, 255, 0));
 }
+
 /*===========================================*/
+// added in this project
+._wrapper-auth {
+    @include placeholders.wrapper;
+    overflow: visible;
+}

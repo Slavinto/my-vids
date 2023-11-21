@@ -33,6 +33,7 @@ const Banner = ({ imgUrl = defaultImgPath, title, subTitle }) => {
             <div className='banner__background-image__container'>
                 <div className='banner__background-image__overlay'></div>
                 <Image
+                    priority={true}
                     className='banner__background-image'
                     src={imgUrl}
                     width={1140}

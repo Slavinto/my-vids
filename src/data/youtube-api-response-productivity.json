@@ -1,0 +1,854 @@
+{
+    "items": [
+        {
+            "kind": "youtube#searchResult",
+            "etag": "WlqIQaJlUzvd6izedLywwcUrNYI",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "6sQsx0bbnO8"
+            },
+            "snippet": {
+                "publishedAt": "2023-03-30T15:00:07Z",
+                "channelId": "UCBIt1VN5j37PVM8LLSuTTlw",
+                "title": "How To INCREASE Your Productivity",
+                "description": "shorts I'm going to show you how to be more productive by using some simple tricks. Implementing them will definitely give you ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/6sQsx0bbnO8/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/6sQsx0bbnO8/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/6sQsx0bbnO8/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Improvement Pill",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-03-30T15:00:07Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "2ltmpHBydeFsu5aBDon9y5tuUG8",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "cfiw3lwrkp0"
+            },
+            "snippet": {
+                "publishedAt": "2022-09-01T14:00:17Z",
+                "channelId": "UCZ59iKBmGRfQlnl73sOX0Lw",
+                "title": "How I stay productive 98% of every day.",
+                "description": "How I stay productive 98% of every day. Try Notion for free: https://ntn.so/sebastian Try Shopify for $1: https://shopify.pxf.io/sebb ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/cfiw3lwrkp0/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/cfiw3lwrkp0/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/cfiw3lwrkp0/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Sebastian Ghiorghiu",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-09-01T14:00:17Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "ihloK3aiPGEsEiOC-u4nrcs_ORQ",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "eAj8AC5RmSg"
+            },
+            "snippet": {
+                "publishedAt": "2021-11-06T21:16:00Z",
+                "channelId": "UCPk2s5c4R_d-EUUNvFFODoA",
+                "title": "Productivity Hack",
+                "description": "I'll edit your college essay! https://nextadmit.com.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/eAj8AC5RmSg/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/eAj8AC5RmSg/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/eAj8AC5RmSg/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Gohar Khan",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-11-06T21:16:00Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "UUPe1O5R5JOQJYdqutD4djdCjLg",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "s6tLGo9yij0"
+            },
+            "snippet": {
+                "publishedAt": "2020-11-30T15:30:04Z",
+                "channelId": "UCpExuV8qJMfCaSQNL1YG6bQ",
+                "title": "I Increased My Productivity 10x - By Turning My Life Into a Game",
+                "description": "When I was younger I used to play a lot of video games. But as I grew older, they started taking too much time from my other ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/s6tLGo9yij0/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/s6tLGo9yij0/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/s6tLGo9yij0/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Better Than Yesterday",
+                "liveBroadcastContent": "none",
+                "publishTime": "2020-11-30T15:30:04Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "mbwEj4uyRHLd3FuMSA4jQ88oBdI",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "1LOlJay5Sbw"
+            },
+            "snippet": {
+                "publishedAt": "2022-10-18T13:00:02Z",
+                "channelId": "UCwAnu01qlnVg1Ai2AbtTMaA",
+                "title": "Top 5 Productivity Tips for Work!",
+                "description": "My Premium Resume Package: https://jeffsu.gumroad.com/l/premium-resume-package I'm not saying we should all quiet quit, ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/1LOlJay5Sbw/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/1LOlJay5Sbw/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/1LOlJay5Sbw/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Jeff Su",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-10-18T13:00:02Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "TDG3ykp5t3ow8R1zrcqxSTCp3zg",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "cshVfS2LXm0"
+            },
+            "snippet": {
+                "publishedAt": "2016-07-21T08:22:28Z",
+                "channelId": "UC6oh54zIYKyW6hgBiZzLLsA",
+                "title": "A Method To x100 Your Productivity | Robin Sharma",
+                "description": "To join Robin Sharma's 30-Day Challenge click here: https://rshar.ma/MonkMethodYT Order your copy of Robin Sharma's new ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/cshVfS2LXm0/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/cshVfS2LXm0/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/cshVfS2LXm0/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Robin Sharma",
+                "liveBroadcastContent": "none",
+                "publishTime": "2016-07-21T08:22:28Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "HPvUkDChLTHx-t4zk8tDVZ7bNpw",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "b94sWIkQEPo"
+            },
+            "snippet": {
+                "publishedAt": "2022-06-07T07:30:03Z",
+                "channelId": "UCeoU2maQX8JiQ9DTuhOVz5g",
+                "title": "How To Increase Productivity",
+                "description": "Here are the 3 key things I do every day to stay productive 1. Wake up early. I personally get up as soon as my alarm rings.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/b94sWIkQEPo/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/b94sWIkQEPo/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/b94sWIkQEPo/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Kharma Medic",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-06-07T07:30:03Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "1U7BsI3yGI7iYVciFa5g9f6JpkE",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "FbSNfj2S6Pw"
+            },
+            "snippet": {
+                "publishedAt": "2021-05-21T14:03:18Z",
+                "channelId": "UCoOae5nYA7VqaXzerajD0lg",
+                "title": "5 Essential Tips for Long-Lasting Productivity",
+                "description": "The first 1000 people to use this link will get 30% off an annual Skillshare Premium Membership: https://skl.sh/aliabdaal05211 In ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/FbSNfj2S6Pw/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/FbSNfj2S6Pw/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/FbSNfj2S6Pw/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Ali Abdaal",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-05-21T14:03:18Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "vzbfDYFyx6o9RssINZXZSaPG24o",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "IMj6Y94x_-8"
+            },
+            "snippet": {
+                "publishedAt": "2021-06-25T17:41:51Z",
+                "channelId": "UCSCrbvD1GybJW3m3Fj_GkjA",
+                "title": "3 Simple Steps to Increase Productivity 🪴",
+                "description": "",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/IMj6Y94x_-8/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/IMj6Y94x_-8/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/IMj6Y94x_-8/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Aman Dhattarwal Talks",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-06-25T17:41:51Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "lmGORzA6Yslx3KwFC85eYZl6BjM",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "Hu4Yvq-g7_Y"
+            },
+            "snippet": {
+                "publishedAt": "2019-04-05T14:27:26Z",
+                "channelId": "UCsT0YIqwnpJCM-mx7-gSA4Q",
+                "title": "How to Get Your Brain to Focus | Chris Bailey | TEDxManchester",
+                "description": "The latest research is clear: the state of our attention determines the state of our lives. So how do we harness our attention to focus ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/Hu4Yvq-g7_Y/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/Hu4Yvq-g7_Y/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/Hu4Yvq-g7_Y/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "TEDx Talks",
+                "liveBroadcastContent": "none",
+                "publishTime": "2019-04-05T14:27:26Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "W5yADNn9s2grO453F9auEAUrKNw",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "sJwtVFEiBLk"
+            },
+            "snippet": {
+                "publishedAt": "2023-04-07T15:00:41Z",
+                "channelId": "UCBnHZUkOqg73h7gWiIu0ITA",
+                "title": "how to be productive | discipline, healthy habits, motivation, balance + THAT GIRL routine",
+                "description": "VOTE FOR ME IN THE LIFESTYLE CREATOR AWARDS: https://www.bcreator.co.uk/awards/ MY NEW VLOG CHANNEL: ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/sJwtVFEiBLk/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/sJwtVFEiBLk/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/sJwtVFEiBLk/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Tam Kaur",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-04-07T15:00:41Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "EXTIhWrJk8FmA_9F8tePDW5qgqI",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "Uri24Z3oc74"
+            },
+            "snippet": {
+                "publishedAt": "2022-12-05T17:47:41Z",
+                "channelId": "UCoOae5nYA7VqaXzerajD0lg",
+                "title": "12 cheap purchases to boost your productivity",
+                "description": "Pre-order my book to get an exclusive ticket to The Feel-Good Productivity Annual Planning Workshop: ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/Uri24Z3oc74/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/Uri24Z3oc74/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/Uri24Z3oc74/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Ali Abdaal",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-12-05T17:47:41Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "c_l3ZJh5hagdD5DyVXrCUKRKA34",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "7M6bIeVbCqA"
+            },
+            "snippet": {
+                "publishedAt": "2022-08-02T13:00:08Z",
+                "channelId": "UCwAnu01qlnVg1Ai2AbtTMaA",
+                "title": "My Simple Productivity System (for normal people)!",
+                "description": "My Premium Resume Package: https://jeffsu.gumroad.com/l/premium-resume-package \u200d   I love watching productivity videos ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/7M6bIeVbCqA/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/7M6bIeVbCqA/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/7M6bIeVbCqA/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Jeff Su",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-08-02T13:00:08Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "LdxiaiHovurNlkyJn_WJeQQ9zm4",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "T4CB5RPbtCk"
+            },
+            "snippet": {
+                "publishedAt": "2023-03-29T14:30:20Z",
+                "channelId": "UCAuUUnT6oDeKwE6v1NGQxug",
+                "title": "The Unexpected Key to Boosting Your Productivity | The Way We Work, a TED series",
+                "description": "Ever wished you could stop procrastinating and just be as efficient as a machine? Since you're a human, that's not going to ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/T4CB5RPbtCk/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/T4CB5RPbtCk/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/T4CB5RPbtCk/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "TED",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-03-29T14:30:20Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "fZDralosrhaQYisQZhyuSi7Ysa4",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "LXYjFsuVOoc"
+            },
+            "snippet": {
+                "publishedAt": "2023-08-30T15:00:16Z",
+                "channelId": "UCoOae5nYA7VqaXzerajD0lg",
+                "title": "I Tried 137 Productivity Tools. These Are The Best.",
+                "description": "If you're struggling, consider therapy with BetterHelp #ad. Click https://betterhelp.com/aliabdaal for a 10% discount on your first ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/LXYjFsuVOoc/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/LXYjFsuVOoc/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/LXYjFsuVOoc/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Ali Abdaal",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-08-30T15:00:16Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "AQzuEJKKmqbC2B-Fv-TMsDcnOmU",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "qRIcX0oJ1k4"
+            },
+            "snippet": {
+                "publishedAt": "2013-11-01T19:37:40Z",
+                "channelId": "UCk8n46m74K5XWfdeBzOXDfA",
+                "title": "How to Become More Productive at Work",
+                "description": "As a follow-up to his book \"Extreme Productivity,\" HBS Professor Bob Pozen reveals his secrets to workplace productivity and high ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/qRIcX0oJ1k4/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/qRIcX0oJ1k4/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/qRIcX0oJ1k4/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Harvard Business School",
+                "liveBroadcastContent": "none",
+                "publishTime": "2013-11-01T19:37:40Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "qG4ccPYOyep5-pv2nn2muC93XK0",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "kJr9kKO7PYs"
+            },
+            "snippet": {
+                "publishedAt": "2022-08-03T01:29:14Z",
+                "channelId": "UCr198naDFSfeRAvBYS5QnGw",
+                "title": "INCREASE PRODUCTIVITY | Neuroscientist Andrew Huberman",
+                "description": "GET MORE DONE by INCREASING PRODUCTIVITY based on YOUR individual BODY TEMPERATURE. Find the best time of ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/kJr9kKO7PYs/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/kJr9kKO7PYs/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/kJr9kKO7PYs/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Mindset Rx",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-08-03T01:29:14Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "2bDMwDTCAB6esJq6zbCHOwT9YIA",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "26YCsv_EVAE"
+            },
+            "snippet": {
+                "publishedAt": "2021-11-12T13:30:00Z",
+                "channelId": "UCbT_7qRIrw8TMH8ovjTYBJQ",
+                "title": "Increase Your Productivity By 10 Times Doing This! ft. Dr. Radhakrishnan Pillai | TRS Clips 990",
+                "description": "Watch The Full Episode Here: https://youtu.be/moB6lAKV35Y Listen To #TheRanveerShow On Spotify: ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/26YCsv_EVAE/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/26YCsv_EVAE/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/26YCsv_EVAE/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "TRS Clips",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-11-12T13:30:00Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "wu8ZPtrbGJaaxFFJ2l-_jhJITFo",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "2kZXaf8HaOc"
+            },
+            "snippet": {
+                "publishedAt": "2023-01-02T17:24:26Z",
+                "channelId": "UCcNBr6mQHqN_sW33PlYNroQ",
+                "title": "Do It Today: Overcome Procrastination, Improve Productivity, and Achieve More Meaningful Things",
+                "description": "https://waqasreads.com/ Are you also tired of putting off your dreams until “tomorrow?” Guess what! Tomorrow never comes.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/2kZXaf8HaOc/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/2kZXaf8HaOc/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/2kZXaf8HaOc/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Waqas Ahmed",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-01-02T17:24:26Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "VwBWtQG492omp8dudnq4ECZTiYE",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "R8yEvQ0lx-s"
+            },
+            "snippet": {
+                "publishedAt": "2021-06-01T12:00:17Z",
+                "channelId": "UCSQ6ebJE6MTrEAN_P-L-fuA",
+                "title": "How To Edit YouTube Videos 10x Faster! - Productivity Hacks",
+                "description": "Do you wish you could edit your YouTube videos faster? This video will teach you how with some tried and tested editing ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/R8yEvQ0lx-s/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/R8yEvQ0lx-s/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/R8yEvQ0lx-s/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Film Booth",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-06-01T12:00:17Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "nd6BcrhvXp3sbaOSDECM4uGU0rg",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "vvGTc3LJtVQ"
+            },
+            "snippet": {
+                "publishedAt": "2022-11-15T12:10:44Z",
+                "channelId": "UCwVQIkAtyZzQSA-OY1rsGig",
+                "title": "Music for Work — Mind Boosting Mix",
+                "description": "This live stream will make you feel more powerful. With the right music, you can achieve your goals faster. Beats of special ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/vvGTc3LJtVQ/default_live.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/vvGTc3LJtVQ/mqdefault_live.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/vvGTc3LJtVQ/hqdefault_live.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Chill Music Lab",
+                "liveBroadcastContent": "live",
+                "publishTime": "2022-11-15T12:10:44Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "c5Ur-mwzU25SZiiKHOjbTFzDPcY",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "poc4ctbnDYA"
+            },
+            "snippet": {
+                "publishedAt": "2023-08-04T13:30:22Z",
+                "channelId": "UCoOae5nYA7VqaXzerajD0lg",
+                "title": "I Read 107 Productivity Books. Here&#39;s What Actually Works.",
+                "description": "To try everything Brilliant has to offer for free click here: https://brilliant.org/AliAbdaal Hey friends, I've read so many productivity ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/poc4ctbnDYA/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/poc4ctbnDYA/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/poc4ctbnDYA/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Ali Abdaal",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-08-04T13:30:22Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "RBlKXkqpHi_OjGrZOv0DylnsoBY",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "FGRv5bSIgPU"
+            },
+            "snippet": {
+                "publishedAt": "2018-09-30T16:18:54Z",
+                "channelId": "UCc1QflC90Nkf_SDBZwJScDQ",
+                "title": "7 simple habits for a more productive life | studytee",
+                "description": "Thank you to Audible for sponsoring this video! To start your 30 day trial and receive a total of 3 free audiobooks, go to ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/FGRv5bSIgPU/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/FGRv5bSIgPU/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/FGRv5bSIgPU/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "studytee",
+                "liveBroadcastContent": "none",
+                "publishTime": "2018-09-30T16:18:54Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "VJF-d2I1O47jLmEy56aONBg2whw",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "dRIsmG8CyTM"
+            },
+            "snippet": {
+                "publishedAt": "2020-06-29T15:00:14Z",
+                "channelId": "UCnjI8tPpOfTqdIXFGQI72AQ",
+                "title": "7 Time Management Strategies for Increased Productivity | Brooke Castillo",
+                "description": "Click the link below to learn you can use Monday Hour One to transform your relationship with your to-do list forever.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/dRIsmG8CyTM/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/dRIsmG8CyTM/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/dRIsmG8CyTM/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "The Life Coach School",
+                "liveBroadcastContent": "none",
+                "publishTime": "2020-06-29T15:00:14Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "9N8ySJ2BmHyrrW7ZJUJEUJ-NxR0",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "LVbUNRwpXzw"
+            },
+            "snippet": {
+                "publishedAt": "2022-04-20T15:03:15Z",
+                "channelId": "UCwVQIkAtyZzQSA-OY1rsGig",
+                "title": "Productive Work Music — Tony Stark&#39;s Concentration Mix",
+                "description": "This deep and calm playlist is designed to help you focus and concentrate for the next hour. Relaxing downtempo and ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/LVbUNRwpXzw/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/LVbUNRwpXzw/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/LVbUNRwpXzw/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Chill Music Lab",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-04-20T15:03:15Z"
+            }
+        }
+    ]
+}

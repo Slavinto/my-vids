@@ -70,6 +70,8 @@ $bannerHeight: 76rem;
 
         @include p.center-absolute;
         @include p.adaptive;
+        width: auto;
+        height: auto;
         z-index: 0;
     }
 }
