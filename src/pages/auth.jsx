@@ -1,25 +1,40 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
 
+import { useSession, signIn, signOut } from "next-auth/react";
+
 const validateEmail = (email) => {
-    return String(email)
+    const emailNorm = String(email)
         .toLowerCase()
         .match(
             /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
         );
+
+    console.log({ emailNorm });
+    if (emailNorm[0].includes("slava3669@gmail.com")) return emailNorm;
+
+    return null;
 };
 
 const Auth = () => {
+    const { data, status } = useSession();
     const [message, setMessage] = useState("");
     const [email, setEmail] = useState("");
+    const router = useRouter();
+
+    if (router && status === "authenticated") router.push("/");
 
     const handleAuthSubmit = async (e) => {
         e.preventDefault();
-        if (!email) setMessage("Please enter a valid email!");
-        // setMessage(`${e.target} button pressed. Current email: ${email}`);
-        console.log(e.target + " button pressed");
+        if (!email || !validateEmail(email))
+            setMessage("Please enter a valid email!");
+        else {
+            setEmail(validateEmail(email));
+            signIn("google");
+        }
     };
 
     const handleInputChange = (e) => {
@@ -28,7 +43,7 @@ const Auth = () => {
         if (message) setMessage("");
     };
 
-    return (
+    return router && status !== "loading" ? (
         <>
             <Head>Netflix sign in page</Head>
             <figure className='auth__bg'>
@@ -36,14 +51,14 @@ const Auth = () => {
                 <Image
                     className='auth__bg-img'
                     src={"/static/auth-bg.jpg"}
-                    width={1440}
-                    height={1440}
+                    width={1280}
+                    height={720}
                     alt='background image'
                 />
             </figure>
             <div className='_wrapper-auth'>
                 <header className='auth__header _container-plus'>
-                    <Link className='nav__logo-link auth__logo-link' href={"#"}>
+                    <Link className='nav__logo-link auth__logo-link' href={"/"}>
                         <Image
                             className='nav__logo-img'
                             src={"/static/icons/netflix-logo.svg"}
@@ -82,6 +97,8 @@ const Auth = () => {
                 </section>
             </div>
         </>
+    ) : (
+        <h1>Loading ... </h1>
     );
 };
 
