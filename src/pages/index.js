@@ -2,6 +2,8 @@ import Head from "next/head";
 import Banner from "@/components/Banner.component";
 import Navbar from "@/components/Navbar.component";
 import Cards from "@/components/Cards.component";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/pages/api/auth/[...nextauth]";
 
 import {
     getVideos,
@@ -9,7 +11,7 @@ import {
     getOfflineVideos,
 } from "../../lib/videos";
 
-export async function getServerSideProps() {
+export async function getServerSideProps(context) {
     //==============================================
     // temporary get videos from files solution
     const disneyVideos = getOfflineVideos("Disney trailers");
@@ -18,6 +20,23 @@ export async function getServerSideProps() {
         "videos for increasing Productivity"
     );
     const popularVideos = getOfflineVideos("Popular videos for today");
+    //==============================================
+    const session = await getServerSession(
+        context.req,
+        context.res,
+        authOptions
+    );
+    if (!session) {
+        return {
+            redirect: {
+                destination: "/auth",
+                permanent: false,
+            },
+            props: {},
+        };
+    }
+
+    //==============================================
     //==============================================
 
     // const disneyVideos = await getVideos("Disney trailers");
@@ -34,6 +53,7 @@ export async function getServerSideProps() {
             productivityVideos,
             popularVideos,
         },
+        session,
     };
 }
 
