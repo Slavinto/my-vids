@@ -2,7 +2,7 @@ import Head from "next/head";
 import Banner from "@/components/Banner.component";
 import Navbar from "@/components/Navbar.component";
 import Cards from "@/components/Cards.component";
-import { getServerSession } from "next-auth";
+import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
 
 import {
@@ -26,7 +26,10 @@ export async function getServerSideProps(context) {
         context.res,
         authOptions
     );
+    // console.log({ ...context });
+    // console.log("session from homepage", { session });
     if (!session) {
+        console.log("redirected from homepage");
         return {
             redirect: {
                 destination: "/auth",
@@ -52,8 +55,8 @@ export async function getServerSideProps(context) {
             travelVideos,
             productivityVideos,
             popularVideos,
+            session,
         },
-        session,
     };
 }
 
@@ -64,6 +67,7 @@ export default function Home({
     popularVideos,
 }) {
     // console.log({ ...disneyVideos });
+    console.log("homepage");
     return (
         <>
             <Head>

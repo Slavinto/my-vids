@@ -8,6 +8,7 @@ export const authOptions = {
             clientSecret: process.env.GOOGLE_SECRET,
         }),
     ],
+    // need to pass this value from .env.local or will get a decryption error
     secret: process.env.NEXTAUTH_SECRET,
     session: {
         strategy: "jwt",

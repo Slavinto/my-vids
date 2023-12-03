@@ -1,31 +1,56 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import { useState } from "react";
+import { getServerSession } from "next-auth/next";
+import { authOptions } from "@/pages/api/auth/[...nextauth]";
 
-import { useSession, signIn, signOut } from "next-auth/react";
+import { signIn } from "next-auth/react";
+import { calcLength } from "framer-motion";
 
 const validateEmail = (email) => {
-    const emailNorm = String(email)
-        .toLowerCase()
-        .match(
-            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-        );
-
-    console.log({ emailNorm });
-    if (emailNorm[0].includes("slava3669@gmail.com")) return emailNorm;
+    const emailNorm = String(email).toLowerCase();
+    // .match(
+    //     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    // );
+    if (emailNorm) return emailNorm;
 
     return null;
 };
 
+export async function getServerSideProps(context) {
+    const session = await getServerSession(
+        context?.req,
+        context?.res,
+        authOptions
+    );
+    // console.log("auth context", { ...context });
+    // console.log("session from /auth", { session });
+    if (session) {
+        console.log("redirected from /auth");
+        return {
+            redirect: {
+                destination: "/",
+                permanent: false,
+            },
+            props: {},
+        };
+    }
+
+    //==============================================
+    return {
+        props: {
+            session: null,
+        },
+    };
+    //==============================================
+}
+
 const Auth = () => {
-    const { data, status } = useSession();
     const [message, setMessage] = useState("");
     const [email, setEmail] = useState("");
-    const router = useRouter();
 
-    if (router && status === "authenticated") router.push("/");
+    console.log("auth component rendering");
 
     const handleAuthSubmit = async (e) => {
         e.preventDefault();
@@ -43,7 +68,7 @@ const Auth = () => {
         if (message) setMessage("");
     };
 
-    return router && status !== "loading" ? (
+    return (
         <>
             <Head>Netflix sign in page</Head>
             <figure className='auth__bg'>
@@ -97,8 +122,6 @@ const Auth = () => {
                 </section>
             </div>
         </>
-    ) : (
-        <h1>Loading ... </h1>
     );
 };
 
