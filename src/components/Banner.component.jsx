@@ -1,12 +1,21 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const defaultImgPath = "/static/clifford.jpg";
 
-const Banner = ({ imgUrl = defaultImgPath, title, subTitle }) => {
-    const handleClickCta = () => {
-        console.log("cta button clicked");
+const Banner = ({
+    id = "4zH5iYM4wJo",
+    imgUrl = defaultImgPath,
+    title,
+    subTitle,
+}) => {
+    const router = useRouter();
+
+    const handleClickCta = (e) => {
+        e.preventDefault();
+        router.push(`/video/${id}`);
     };
 
     return (

@@ -6,6 +6,7 @@ const Cards = ({ sectionTitle, cardSize, videoArr = [] }) => {
         return (
             <Card
                 key={idx}
+                id={videoObj.id}
                 sideEl={idx === 0 || idx === videoArr.length - 1}
                 size={cardSize}
                 imgUrl={videoObj.imgUrl}

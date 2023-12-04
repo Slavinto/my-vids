@@ -5,6 +5,7 @@
 // pages
 @use "pages-index";
 @use "auth";
+@use "[id]" as id;
 
 // components
 @use "Banner.style";

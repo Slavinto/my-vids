@@ -1,21 +1,10 @@
 import { SessionProvider } from "next-auth/react";
 import "../styles/style.scss";
-import { useRouter } from "next/router";
-import { useState } from "react";
-
-const loadingJsx = <h1>Loading...</h1>;
 
 export default function App({ Component, pageProps }) {
-    const [userIsLoggedIn, setUserIsLoggedIn] = useState(false);
-    const [isLoading, setIsLoading] = useState(false);
-    const router = useRouter();
-    console.log({ userIsLoggedIn });
-    // console.log("props from app", { ...pageProps });
-    console.log(Component.name);
-    console.log("isloading from _app: ", { isLoading });
     return (
         <SessionProvider session={pageProps.session}>
-            {isLoading ? loadingJsx : <Component {...pageProps} />}
+            <Component {...pageProps} />
         </SessionProvider>
     );
 }

@@ -26,20 +26,25 @@ export async function getServerSideProps(context) {
         context.res,
         authOptions
     );
-    // console.log({ ...context });
-    // console.log("session from homepage", { session });
-    if (!session) {
-        console.log("redirected from homepage");
-        return {
-            redirect: {
-                destination: "/auth",
-                permanent: false,
-            },
-            props: {},
-        };
-    }
-
     //==============================================
+    return session
+        ? {
+              props: {
+                  disneyVideos,
+                  travelVideos,
+                  productivityVideos,
+                  popularVideos,
+                  session,
+              },
+          }
+        : {
+              redirect: {
+                  destination: "/auth",
+                  permanent: false,
+              },
+              props: {},
+          };
+
     //==============================================
 
     // const disneyVideos = await getVideos("Disney trailers");
@@ -48,16 +53,6 @@ export async function getServerSideProps(context) {
     //     "videos for increasing Productivity"
     // );
     // const popularVideos = await getPopularVideos();
-
-    return {
-        props: {
-            disneyVideos,
-            travelVideos,
-            productivityVideos,
-            popularVideos,
-            session,
-        },
-    };
 }
 
 export default function Home({

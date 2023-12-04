@@ -24,25 +24,20 @@ export async function getServerSideProps(context) {
         context?.res,
         authOptions
     );
-    // console.log("auth context", { ...context });
-    // console.log("session from /auth", { session });
-    if (session) {
-        console.log("redirected from /auth");
-        return {
-            redirect: {
-                destination: "/",
-                permanent: false,
-            },
-            props: {},
-        };
-    }
-
     //==============================================
-    return {
-        props: {
-            session: null,
-        },
-    };
+    return session
+        ? {
+              redirect: {
+                  destination: "/",
+                  permanent: false,
+              },
+              props: {},
+          }
+        : {
+              props: {
+                  session: null,
+              },
+          };
     //==============================================
 }
 

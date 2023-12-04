@@ -53,7 +53,7 @@
 
 // center a block vertically
 @mixin vertical-center {
-    position: relative;
+        position: relative;
     top: 50%;
     -ms-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
