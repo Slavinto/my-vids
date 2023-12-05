@@ -4,50 +4,108 @@ import Modal from "react-modal";
 
 Modal.setAppElement("#__next");
 
-const customStyles = {
-    content: {
-        top: "50%",
-        left: "50%",
-        right: "auto",
-        bottom: "auto",
-        marginRight: "-50%",
-        transform: "translate(-50%, -50%)",
-    },
-};
+function printArr(arr) {
+    return arr.reduce((acc, el, idx) => {
+        return idx < arr.length - 1 ? `${acc} ${el} | ` : ` ${acc} ${el}`;
+    }, "");
+}
 
 const Video = () => {
     const router = useRouter();
-    const { id } = router.query;
+    if (!router) return;
+    // ====================================================================
+    // dummy data
+    const video = {
+        id: router.query,
+        title: "Clifford the Red Dog",
+        channelTitle: "Paramount Pictures",
+        viewCount: 10000000000,
+        publishTime: "01-01-2022",
+        img: "/public/static/clifford.jpg",
+        logo: "/public/static/clifford-small.jpg",
+        tags: ["comedy", "animation", "kids"],
+        cast: ["Darby Camp", "Jack Whitehall", "Izaac Wang"],
+        description:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. A quaerat sapiente, fugiat consequuntur voluptatum laborum eius ipsam dolores placeat distinctio magnam tempore, autem corrupti deleniti in nostrum laudantium delectus tenetur.",
+    };
+    // ====================================================================
+
+    const {
+        id,
+        title,
+        channelTitle,
+        viewCount,
+        publishTime,
+        img,
+        logo,
+        tags,
+        cast,
+        description,
+    } = video;
+
     return (
-        <div>
-            <Modal
-                isOpen={true}
-                className={"modal"}
-                parentSelector={() => document.querySelector("#__next")}
-                // style={customStyles}
-                shouldCloseOnEsc={true}
-                overlayClassName={"modal__overlay _container"}
-                onRequestClose={() => {}}
-                contentLabel='Watch the video'
-            >
-                <h1>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Excepturi, esse in? Similique illo saepe unde pariatur
-                    ipsum, consequatur mollitia aliquid? Natus, cum pariatur
-                    ipsam nihil quis architecto, porro inventore vel, labore
-                    earum possimus nostrum dolorum distinctio saepe? Illo ipsa
-                    voluptas nisi saepe eius, maxime unde nulla iusto sapiente
-                    atque, sequi id ipsam! Velit inventore dolorum dignissimos
-                    totam quibusdam odit sint sit quasi temporibus quis itaque
-                    repudiandae doloremque quod saepe iure quo tempora
-                    recusandae facilis ratione harum reiciendis, nostrum amet
-                    voluptates vel. Unde ullam consectetur accusantium
-                    reiciendis et. Qui perferendis numquam consequatur harum
-                    omnis veritatis! Tenetur maxime est quam illo laudantium.
-                </h1>
-            </Modal>
-        </div>
+        <Modal
+            isOpen={true}
+            className={"modal"}
+            overlayClassName={"modal__overlay _container"}
+            parentSelector={() => document.querySelector("#__next")}
+            shouldCloseOnEsc={true}
+            shouldCloseOnOverlayClick={true}
+            onRequestClose={() => router.back()}
+            contentLabel='Watch the video'
+            // style={customStyles}
+        >
+            <iframe
+                id='ytplayer'
+                className='modal__player'
+                type='text/html'
+                width='100%'
+                height='360'
+                src={`https://www.youtube.com/embed/${id}?autoplay=1&controls=0`}
+                frameBorder='0'
+            ></iframe>
+
+            <article className='modal__details details'>
+                <p className='details__datetime'>{publishTime}</p>
+                <p className='details__cast'>
+                    <span>Cast: </span>
+                    {printArr(cast)}
+                </p>
+                <p className='details__tags'>{printArr(tags)}</p>
+                <p className='details__views'>
+                    <span>View Count: </span>
+                    {viewCount}
+                </p>
+                <p className='details__description'>{description}</p>
+            </article>
+        </Modal>
     );
 };
 
 export default Video;
+
+const customStyles = {
+    overlay: {
+        position: "fixed",
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        backgroundColor: "rgba(255, 255, 255, 0.75)",
+        borderRadius: ".5rem",
+    },
+    content: {
+        position: "absolute",
+        top: "4rem",
+        left: "4rem",
+        right: "4rem",
+        bottom: "4rem",
+        border: "1px solid #ccc",
+        background: "#fff",
+        overflow: "auto",
+        WebkitOverflowScrolling: "touch",
+        borderRadius: ".5rem",
+        outline: "none",
+        padding: "2rem",
+    },
+};

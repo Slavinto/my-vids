@@ -1,24 +1,89 @@
 @use "partials" as p;
 
 .modal {
-    // position: relative;
+    position: absolute;
+
+    top: 4rem;
+    left: 4rem;
+    right: 4rem;
+    bottom: 4rem;
+    background: #000;
+    // background: p.$dark;
+    outline: none;
+    overflow: auto;
+    outline: none;
     padding: 2rem;
-    z-index: 1;
-    background-color: p.$dark;
-    border-radius: 2rem;
-    width: 100%;
-    height: 100%;
-    // @include p.center-absolute;
+    border: 0.1rem solid p.$shadow10;
+    border-radius: 0.5rem;
+    box-shadow: 0.1rem 0rem 2.5rem -0.8rem p.$gray10;
+    -webkit-overflow-scrolling: touch;
 
     &__overlay {
-        border-radius: 2rem;
-        height: 95lvh;
-        margin: 2rem auto;
-        z-index: -1;
-        padding: 1.5rem 1.5rem 0rem 1.5rem;
-        // @include p.overlay(p.$darkOverlay2);
-        overflow: scroll;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: transparent;
+        border-radius: 0.5rem;
+        &._container {
+            margin: 0 auto;
+        }
+    }
 
-        background-color: p.$darkOverlay2;
+    &__player {
+        border: 0.1rem solid p.$gray30;
+        border-radius: 0.5rem;
+        box-shadow: 0.1rem 0rem 2.5rem -0.8rem p.$dark;
     }
 }
+
+.details {
+    margin: 3rem auto;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    row-gap: 1rem;
+    column-gap: 2rem;
+
+    @include p.form-text-light;
+
+    &__datetime {
+    }
+    &__cast {
+        span {
+            color: p.$gray10;
+        }
+    }
+    &__tags {
+    }
+    &__views {
+        span {
+            color: p.$gray10;
+        }
+    }
+    &__description {
+    }
+}
+
+// .modal {
+//     padding: 2rem;
+//     z-index: 1;
+//     background-color: p.$dark;
+//     border-radius: 2rem;
+//     width: 100%;
+//     height: 100%;
+
+//     // @include p.center-absolute;
+
+//     &__overlay {
+//         border-radius: 2rem;
+//         height: 95lvh;
+//         margin: 2rem auto;
+//         z-index: -1;
+//         padding: 1.5rem 1.5rem 0rem 1.5rem;
+//         // @include p.overlay(p.$darkOverlay2);
+//         overflow: scroll;
+
+//         background-color: p.$darkOverlay2;
+//     }
+// }
