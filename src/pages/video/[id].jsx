@@ -16,7 +16,7 @@ const Video = () => {
     // ====================================================================
     // dummy data
     const video = {
-        id: router.query,
+        id: router.query.id,
         title: "Clifford the Red Dog",
         channelTitle: "Paramount Pictures",
         viewCount: 10000000000,
@@ -61,10 +61,9 @@ const Video = () => {
                 type='text/html'
                 width='100%'
                 height='360'
-                src={`https://www.youtube.com/embed/${id}?autoplay=1&controls=0`}
+                src={`http://www.youtube.com/embed/${id}?autoplay=0&controls=0`}
                 frameBorder='0'
             ></iframe>
-
             <article className='modal__details details'>
                 <p className='details__datetime'>{publishTime}</p>
                 <p className='details__cast'>
