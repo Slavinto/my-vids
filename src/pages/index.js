@@ -62,7 +62,7 @@ export default function Home({
     popularVideos,
 }) {
     // console.log({ ...disneyVideos });
-    console.log("homepage");
+    // console.log("homepage");
     return (
         <>
             <Head>

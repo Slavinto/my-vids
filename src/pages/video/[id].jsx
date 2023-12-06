@@ -1,47 +1,34 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 import Modal from "react-modal";
+import { getVideoDetails } from "../../../lib/videos";
 
 Modal.setAppElement("#__next");
 
+const bannerVideos = ["mYfJxlgR2jw", "KCPEHsAViiQ", "4zH5iYM4wJo"];
+
 function printArr(arr) {
+    if (!arr) return "";
     return arr.reduce((acc, el, idx) => {
         return idx < arr.length - 1 ? `${acc} ${el} | ` : ` ${acc} ${el}`;
     }, "");
 }
 
-const Video = () => {
+const Video = (props) => {
     const router = useRouter();
     if (!router) return;
-    // ====================================================================
-    // dummy data
-    const video = {
-        id: router.query.id,
-        title: "Clifford the Red Dog",
-        channelTitle: "Paramount Pictures",
-        viewCount: 10000000000,
-        publishTime: "01-01-2022",
-        img: "/public/static/clifford.jpg",
-        logo: "/public/static/clifford-small.jpg",
-        tags: ["comedy", "animation", "kids"],
-        cast: ["Darby Camp", "Jack Whitehall", "Izaac Wang"],
-        description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. A quaerat sapiente, fugiat consequuntur voluptatum laborum eius ipsam dolores placeat distinctio magnam tempore, autem corrupti deleniti in nostrum laudantium delectus tenetur.",
-    };
-    // ====================================================================
 
     const {
         id,
         title,
         channelTitle,
         viewCount,
-        publishTime,
-        img,
-        logo,
+        time,
+        imgUrl,
         tags,
         cast,
-        description,
-    } = video;
+        desc,
+    } = props.video;
 
     return (
         <Modal
@@ -65,7 +52,7 @@ const Video = () => {
                 frameBorder='0'
             ></iframe>
             <article className='modal__details details'>
-                <p className='details__datetime'>{publishTime}</p>
+                <p className='details__datetime'>{time}</p>
                 <p className='details__cast'>
                     <span>Cast: </span>
                     {printArr(cast)}
@@ -75,7 +62,13 @@ const Video = () => {
                     <span>View Count: </span>
                     {viewCount}
                 </p>
-                <p className='details__description'>{description}</p>
+                <div className='details__description-container'>
+                    <h3 className='details__description-title'>
+                        {title} - {channelTitle}
+                    </h3>
+
+                    <p className='details__description-text'>{desc}</p>
+                </div>
             </article>
         </Modal>
     );
@@ -83,28 +76,65 @@ const Video = () => {
 
 export default Video;
 
-const customStyles = {
-    overlay: {
-        position: "fixed",
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        backgroundColor: "rgba(255, 255, 255, 0.75)",
-        borderRadius: ".5rem",
-    },
-    content: {
-        position: "absolute",
-        top: "4rem",
-        left: "4rem",
-        right: "4rem",
-        bottom: "4rem",
-        border: "1px solid #ccc",
-        background: "#fff",
-        overflow: "auto",
-        WebkitOverflowScrolling: "touch",
-        borderRadius: ".5rem",
-        outline: "none",
-        padding: "2rem",
-    },
-};
+export async function getStaticPaths() {
+    const paths = bannerVideos.map((id) => {
+        return {
+            params: { id },
+        };
+    });
+    return {
+        paths,
+        fallback: "blocking",
+    };
+}
+
+export async function getStaticProps({ params }) {
+    const videoArr = await getVideoDetails(params.id);
+    console.log({ videoArr });
+    return {
+        props: { video: videoArr[0] },
+        revalidate: 10,
+    };
+}
+
+// ====================================================================
+// dummy data
+// const video = {
+//     id: params.id,
+//     title: "Clifford the Red Dog",
+//     channelTitle: "Paramount Pictures",
+//     viewCount: 10000000000,
+//     time: "01-01-2022",
+//     imgUrl: "/public/static/clifford.jpg",
+//     tags: ["comedy", "animation", "kids"],
+//     cast: ["Darby Camp", "Jack Whitehall", "Izaac Wang"],
+//     desc:
+//         "Lorem ipsum dolor sit amet consectetur adipisicing elit. A quaerat sapiente, fugiat consequuntur voluptatum laborum eius ipsam dolores placeat distinctio magnam tempore, autem corrupti deleniti in nostrum laudantium delectus tenetur.",
+// };
+// ====================================================================
+
+// const customStyles = {
+//     overlay: {
+//         position: "fixed",
+//         top: 0,
+//         left: 0,
+//         right: 0,
+//         bottom: 0,
+//         backgroundColor: "rgba(255, 255, 255, 0.75)",
+//         borderRadius: ".5rem",
+//     },
+//     content: {
+//         position: "absolute",
+//         top: "4rem",
+//         left: "4rem",
+//         right: "4rem",
+//         bottom: "4rem",
+//         border: "1px solid #ccc",
+//         background: "#fff",
+//         overflow: "auto",
+//         WebkitOverflowScrolling: "touch",
+//         borderRadius: ".5rem",
+//         outline: "none",
+//         padding: "2rem",
+//     },
+// };
