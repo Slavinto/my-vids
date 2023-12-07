@@ -13,13 +13,41 @@ import {
 
 export async function getServerSideProps(context) {
     //==============================================
+    const isDev = true;
+    //==============================================
+    let props = {};
+    const queries = [
+        "Disney trailers",
+        "Travel blog",
+        "videos for increasing Productivity",
+        "Popular videos for today",
+    ];
+    //==============================================
     // temporary get videos from files solution
-    const disneyVideos = getOfflineVideos("Disney trailers");
-    const travelVideos = getOfflineVideos("Travel blog");
-    const productivityVideos = getOfflineVideos(
-        "videos for increasing Productivity"
-    );
-    const popularVideos = getOfflineVideos("Popular videos for today");
+    queries.forEach(async (query) => {
+        const data = isDev ? getOfflineVideos(query) : await getVideos(query);
+        switch (query) {
+            case queries[0]: {
+                props.disneyVideos = data;
+                break;
+            }
+            case queries[1]: {
+                props.travelVideos = data;
+                break;
+            }
+            case queries[2]: {
+                props.productivityVideos = data;
+                break;
+            }
+            case queries[3]: {
+                props.popularVideos = data;
+                break;
+            }
+            default: {
+                break;
+            }
+        }
+    });
     //==============================================
     const session = await getServerSession(
         context.req,
@@ -27,15 +55,11 @@ export async function getServerSideProps(context) {
         authOptions
     );
     //==============================================
+    // console.log({ ...props });
+
     return session
         ? {
-              props: {
-                  disneyVideos,
-                  travelVideos,
-                  productivityVideos,
-                  popularVideos,
-                  session,
-              },
+              props: { ...props, session },
           }
         : {
               redirect: {

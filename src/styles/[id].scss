@@ -2,7 +2,6 @@
 
 .modal {
     position: absolute;
-
     top: 4rem;
     left: 4rem;
     right: 4rem;
@@ -20,7 +19,7 @@
 
     &__overlay {
         position: fixed;
-        top: 0;
+        top: 7rem;
         left: 0;
         right: 0;
         bottom: 0;
@@ -35,6 +34,7 @@
         border: 0.1rem solid p.$gray30;
         border-radius: 0.5rem;
         box-shadow: 0.1rem 0rem 2.5rem -0.8rem p.$dark;
+        object-fit: contain;
     }
 }
 
@@ -47,14 +47,23 @@
 
     @include p.form-text-light;
 
+    @include p.mq(phablet, max) {
+        grid-template-columns: 1fr;
+    }
+
     &__datetime {
     }
     &__cast {
+        padding: 0rem;
+        max-height: 20rem;
+        overflow: scroll;
         span {
             color: p.$gray10;
         }
     }
     &__tags {
+        max-height: 10rem;
+        overflow: scroll;
     }
     &__views {
         span {
@@ -70,6 +79,8 @@
         &-title {
         }
         &-text {
+            max-height: 20rem;
+            overflow: scroll;
         }
     }
 }

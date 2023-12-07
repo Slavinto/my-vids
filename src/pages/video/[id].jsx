@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import Modal from "react-modal";
 import { getVideoDetails } from "../../../lib/videos";
+import Navbar from "@/components/Navbar.component";
 
 Modal.setAppElement("#__next");
 
@@ -31,46 +32,49 @@ const Video = (props) => {
     } = props.video;
 
     return (
-        <Modal
-            isOpen={true}
-            className={"modal"}
-            overlayClassName={"modal__overlay _container"}
-            parentSelector={() => document.querySelector("#__next")}
-            shouldCloseOnEsc={true}
-            shouldCloseOnOverlayClick={true}
-            onRequestClose={() => router.back()}
-            contentLabel='Watch the video'
-            // style={customStyles}
-        >
-            <iframe
-                id='ytplayer'
-                className='modal__player'
-                type='text/html'
-                width='100%'
-                height='360'
-                src={`http://www.youtube.com/embed/${id}?autoplay=0&controls=0`}
-                frameBorder='0'
-            ></iframe>
-            <article className='modal__details details'>
-                <p className='details__datetime'>{time}</p>
-                <p className='details__cast'>
-                    <span>Cast: </span>
-                    {printArr(cast)}
-                </p>
-                <p className='details__tags'>{printArr(tags)}</p>
-                <p className='details__views'>
-                    <span>View Count: </span>
-                    {viewCount}
-                </p>
-                <div className='details__description-container'>
-                    <h3 className='details__description-title'>
-                        {title} - {channelTitle}
-                    </h3>
+        <div className='_wrapper _container modal__wrapper'>
+            <Navbar />
+            <Modal
+                isOpen={true}
+                className={"modal"}
+                overlayClassName={"modal__overlay _container"}
+                parentSelector={() => document.querySelector("#__next")}
+                shouldCloseOnEsc={true}
+                shouldCloseOnOverlayClick={true}
+                onRequestClose={() => router.back()}
+                contentLabel='Watch the video'
+                // style={customStyles}
+            >
+                <iframe
+                    id='ytplayer'
+                    className='modal__player'
+                    type='text/html'
+                    width='100%'
+                    height='360'
+                    src={`http://www.youtube.com/embed/${id}?autoplay=0&controls=0`}
+                    frameBorder='0'
+                ></iframe>
+                <article className='modal__details details'>
+                    <p className='details__datetime'>{time}</p>
+                    <p className='details__cast'>
+                        <span>Cast: </span>
+                        {printArr(cast)}
+                    </p>
+                    <p className='details__tags'>{printArr(tags)}</p>
+                    <p className='details__views'>
+                        <span>View Count: </span>
+                        {viewCount}
+                    </p>
+                    <div className='details__description-container'>
+                        <h3 className='details__description-title'>
+                            {title} - {channelTitle}
+                        </h3>
 
-                    <p className='details__description-text'>{desc}</p>
-                </div>
-            </article>
-        </Modal>
+                        <p className='details__description-text'>{desc}</p>
+                    </div>
+                </article>
+            </Modal>
+        </div>
     );
 };
 
