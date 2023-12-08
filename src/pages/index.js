@@ -70,6 +70,13 @@ export async function getServerSideProps(context) {
           };
 
     //==============================================
+    // https://learning.edx.org/course/course-v1:LinuxFoundationX+LFS141x+1T2023/block-v1:LinuxFoundationX+LFS141x+1T2023+type@sequential+block@6e76b399bac948e2b2f8bd428291ed43/block-v1:LinuxFoundationX+LFS141x+1T2023+type@vertical+block@c367799769ff4b68b537bf7e30569bdb
+
+    // https://graphql.org/learn/schema/
+
+    // https://graphql.org/learn/queries/
+
+    // https://36-concepts-graphql.netlify.app/toc
 
     // const disneyVideos = await getVideos("Disney trailers");
     // const travelVideos = await getVideos("Travel blog");
