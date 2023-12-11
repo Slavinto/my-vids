@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar.component";
 import Cards from "@/components/Cards.component";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
+import fetchGQLDB from "../../lib/db/hasura";
 
 import {
     getVideos,
@@ -16,6 +17,17 @@ export async function getServerSideProps(context) {
     const isDev = true;
     //==============================================
     let props = {};
+
+    //==============================================
+    const gqlQuery = `query MyQuery {
+        users {
+            id
+        }
+    }`;
+    const { data, error } = await fetchGQLDB(gqlQuery, "MyQuery", {});
+    console.log(data);
+    //==============================================
+
     const queries = [
         "Disney trailers",
         "Travel blog",
@@ -70,14 +82,6 @@ export async function getServerSideProps(context) {
           };
 
     //==============================================
-    // https://learning.edx.org/course/course-v1:LinuxFoundationX+LFS141x+1T2023/block-v1:LinuxFoundationX+LFS141x+1T2023+type@sequential+block@6e76b399bac948e2b2f8bd428291ed43/block-v1:LinuxFoundationX+LFS141x+1T2023+type@vertical+block@c367799769ff4b68b537bf7e30569bdb
-
-    // https://graphql.org/learn/schema/
-
-    // https://graphql.org/learn/queries/
-
-    // https://36-concepts-graphql.netlify.app/toc
-
     // const disneyVideos = await getVideos("Disney trailers");
     // const travelVideos = await getVideos("Travel blog");
     // const productivityVideos = await getVideos(
