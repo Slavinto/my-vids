@@ -94,7 +94,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
     const videoArr = await getVideoDetails(params.id);
-    console.log({ videoArr });
+    // console.log({ videoArr });
     return {
         props: { video: videoArr[0] },
         revalidate: 10,
