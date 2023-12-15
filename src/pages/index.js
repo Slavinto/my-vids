@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar.component";
 import Cards from "@/components/Cards.component";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
-import fetchGQLDB from "../../lib/db/hasura";
+import jwt from "jsonwebtoken";
 
 import {
     getVideos,
@@ -17,16 +17,6 @@ export async function getServerSideProps(context) {
     const isDev = true;
     //==============================================
     let props = {};
-
-    //==============================================
-    const gqlQuery = `query MyQuery {
-        users {
-            id
-        }
-    }`;
-    const { data, error } = await fetchGQLDB(gqlQuery, "MyQuery", {});
-    console.log(data);
-    //==============================================
 
     const queries = [
         "Disney trailers",
@@ -66,8 +56,10 @@ export async function getServerSideProps(context) {
         context.res,
         authOptions
     );
+
     //==============================================
     // console.log({ ...props });
+    // console.log({ session });
 
     return session
         ? {
@@ -98,6 +90,7 @@ export default function Home({
 }) {
     // console.log({ ...disneyVideos });
     // console.log("homepage");
+
     return (
         <>
             <Head>

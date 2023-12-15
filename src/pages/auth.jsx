@@ -6,7 +6,7 @@ import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
 
 import { signIn } from "next-auth/react";
-import { calcLength } from "framer-motion";
+import login from "./api/login";
 
 const validateEmail = (email) => {
     const emailNorm = String(email).toLowerCase();
@@ -24,6 +24,20 @@ export async function getServerSideProps(context) {
         context?.res,
         authOptions
     );
+    //==============================================
+
+    if (session) {
+        const db_user = await login(
+            {
+                method: "POST",
+                headers: {
+                    user_login: session.user.email,
+                    user_name: session.user.name,
+                },
+            },
+            {}
+        );
+    }
     //==============================================
     return session
         ? {
