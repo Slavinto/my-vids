@@ -1,5 +1,5 @@
 import { getDbUser, insertDbUser } from "../../../lib/db/hasura";
-import jwt from "jsonwebtoken";
+import { signJwtToken } from "../../../lib/jwt";
 
 const login = async (req, res) => {
     if (req.method !== "POST")
@@ -9,12 +9,14 @@ const login = async (req, res) => {
     try {
         //==============================================
         // getting login(email) from request headers
-        const { login, name } = req?.headers;
 
+        // const { login, name } = req?.headers;
+        console.log({ ...req.body });
         if (!login) {
             // exit if no email login provided
             return res.status(400).json({ message: "Error - invalid login!" });
         }
+
         // generate jwt token for particular email login
         const token = "Bearer " + signJwtToken(login);
 
@@ -22,9 +24,10 @@ const login = async (req, res) => {
         const { data, error } = await getDbUser(login, token);
 
         if (!data || error) {
-            return res
-                .status(500)
-                .json({ message: "Error getting user from DB!" });
+            return res.status(500).json({
+                message: "Error getting user from DB!",
+                token: { token },
+            });
         }
 
         const { users } = data;
@@ -55,21 +58,3 @@ const login = async (req, res) => {
 };
 
 export default login;
-
-export function signJwtToken(user_login) {
-    const token = jwt.sign(
-        {
-            iat: Math.floor(Date.now() / 1000),
-            exp: Math.floor(Date.now() / 1000 + 10 * 24 * 60 * 60),
-            "https://hasura.io/jwt/claims": {
-                "X-Hasura-Default-Role": "user",
-                "X-Hasura-Allowed-Roles": ["user", "admin"],
-                "X-Hasura-User-Email": user_login,
-                // "X-Hasura-User-Email": req.user_login,
-            },
-        },
-        process.env.HASURA_APPLICATION_SECRET
-    );
-
-    return token;
-}

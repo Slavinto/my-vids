@@ -4,7 +4,6 @@ import Navbar from "@/components/Navbar.component";
 import Cards from "@/components/Cards.component";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
-import jwt from "jsonwebtoken";
 
 import {
     getVideos,
