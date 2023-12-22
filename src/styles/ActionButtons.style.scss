@@ -1,0 +1,28 @@
+@use "partials" as p;
+
+.a-b {
+    height: 5rem;
+    background-color: transparent;
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    z-index: 15;
+    display: flex;
+    gap: 3rem;
+
+    &__icon-container {
+        width: 5rem;
+        height: 5rem;
+        border: 0.3rem solid p.$white20;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: p.$gray30;
+        cursor: pointer;
+
+        &._active {
+            background-color: p.$gray40;
+        }
+    }
+}

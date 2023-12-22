@@ -6,8 +6,8 @@ import { useState } from "react";
 import { signIn } from "next-auth/react";
 
 import { getToken } from "next-auth/jwt";
-import { getDbUser, insertDbUser } from "../../lib/db/hasura";
-import { signJwtToken } from "../../lib/jwt";
+import { checkDbUser } from "../../lib/db/hasura";
+import { signJwtToken, validateJwtToken } from "../../lib/jwt";
 import { setTokenCookie } from "../../lib/cookies";
 
 const validateEmail = (email) => {
@@ -22,7 +22,6 @@ const validateEmail = (email) => {
 
 export async function getServerSideProps(context) {
     try {
-        let user = null;
         const { req, res } = context;
         //==============================================
         const nextAuthToken = await getToken({
@@ -36,40 +35,19 @@ export async function getServerSideProps(context) {
                 },
             };
 
-        const hasuraToken = "Bearer " + signJwtToken(nextAuthToken);
-        const hasuraCookie = setTokenCookie(hasuraToken);
-        console.log({ hasuraCookie });
-        const { data, error } = await getDbUser(
-            nextAuthToken.email,
-            hasuraToken
-        );
+        let dbToken = "Bearer " + signJwtToken(nextAuthToken);
 
-        if (data?.users.length === 0 && !error) {
-            const { data, error } = await insertDbUser(
-                nextAuthToken,
-                hasuraToken
-            );
-            if (error) {
-                return {
-                    props: {
-                        user: null,
-                        message: "Error inserting user in database!",
-                    },
-                };
-            }
-            user = data?.users[0];
-        } else if (data?.users.length !== 0) {
-            user = data.users[0];
-        } else if (error) {
-            return {
-                props: {
-                    user: null,
-                    message: "Error: Can not get user from database!",
-                },
-            };
+        const user = await checkDbUser(nextAuthToken, dbToken);
+        console.log({ user });
+        if (user) {
+            // const decoded = validateJwtToken(dbToken);
+            // const tokenWithId = signJwtToken();
+            // console.log(decoded);
         }
+
+        setTokenCookie("hasura", dbToken, res);
         //==============================================
-        return user
+        return user?.user_email
             ? {
                   redirect: {
                       destination: "/",
@@ -79,19 +57,32 @@ export async function getServerSideProps(context) {
               }
             : {
                   props: {
-                      user: null,
+                      user: user?.message || null,
                   },
               };
     } catch (error) {
         console.error("Error: " + error.message);
+        return {
+            props: {
+                user: null,
+                message: "Error: " + error.message,
+            },
+        };
     }
 
     //==============================================
 }
 
-const Auth = () => {
+const Auth = (props) => {
     const [message, setMessage] = useState("");
     const [email, setEmail] = useState("");
+
+    if (props?.user?.message && !message) {
+        setMessage(
+            "Something went wrong during login: " + props?.user?.message
+        );
+    }
+    // console.log({ ...props });
 
     console.log("auth component rendering");
 

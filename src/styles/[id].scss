@@ -35,6 +35,10 @@
         border-radius: 0.5rem;
         box-shadow: 0.1rem 0rem 2.5rem -0.8rem p.$dark;
         object-fit: contain;
+
+        &-container {
+            position: relative;
+        }
     }
 }
 

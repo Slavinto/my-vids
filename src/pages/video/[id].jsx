@@ -1,8 +1,10 @@
-import { useState } from "react";
 import { useRouter } from "next/router";
 import Modal from "react-modal";
 import { getVideoDetails } from "../../../lib/videos";
 import Navbar from "@/components/Navbar.component";
+import ActionButtons from "@/components/ActionButtons.component";
+import { useSession } from "next-auth/react";
+import { useState, useEffect } from "react";
 
 Modal.setAppElement("#__next");
 
@@ -16,8 +18,26 @@ function printArr(arr) {
 }
 
 const Video = (props) => {
+    // console.log({ props });
     const router = useRouter();
-    if (!router) return;
+    const { data: session, status } = useSession();
+    const [videoData, setVideoData] = useState({});
+
+    useEffect(() => {
+        (async () => {
+            const response = await fetch("/api/myVideo", {
+                method: "POST",
+                body: JSON.stringify({ ...session }),
+            });
+            const data = await response.json();
+            setVideoData(data);
+            // console.log({ data });
+        })();
+    }, [session]);
+
+    if (!session || status !== "authenticated") router.push("/auth");
+
+    console.log({ session });
 
     const {
         id,
@@ -45,15 +65,18 @@ const Video = (props) => {
                 contentLabel='Watch the video'
                 // style={customStyles}
             >
-                <iframe
-                    id='ytplayer'
-                    className='modal__player'
-                    type='text/html'
-                    width='100%'
-                    height='360'
-                    src={`http://www.youtube.com/embed/${id}?autoplay=0&controls=0`}
-                    frameBorder='0'
-                ></iframe>
+                <div className='modal__player-container _container'>
+                    <ActionButtons />
+                    <iframe
+                        id='ytplayer'
+                        className='modal__player'
+                        type='text/html'
+                        width='100%'
+                        height='360'
+                        src={`http://www.youtube.com/embed/${id}?autoplay=0&controls=0`}
+                        frameBorder='0'
+                    ></iframe>
+                </div>
                 <article className='modal__details details'>
                     <p className='details__datetime'>{time}</p>
                     <p className='details__cast'>
@@ -94,7 +117,17 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
     const videoArr = await getVideoDetails(params.id);
-    // console.log({ videoArr });
+
+    // const response = await fetch(`${process.env.NEXTAUTH_URL}/api/myVideo`, {
+    //     method: "POST",
+    //     headers: {
+    //         "Content-Type": "application/json",
+    //     },
+    // });
+    // const data = await response.json();
+
+    // console.log({ data });
+
     return {
         props: { video: videoArr[0] },
         revalidate: 10,
