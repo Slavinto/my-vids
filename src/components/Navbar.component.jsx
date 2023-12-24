@@ -10,6 +10,8 @@ const Navbar = (props) => {
     const [user, setUser] = useState(null);
     const router = useRouter();
     const { data, status } = useSession();
+
+    // if (!router) return;
     if (status === "authenticated" && !user) setUser(data.user);
 
     const handleClickHome = (e) => {
@@ -28,8 +30,15 @@ const Navbar = (props) => {
     };
 
     const handleClickSignOut = (e) => {
+        e.preventDefault();
         signOut();
     };
+
+    useEffect(() => {
+        if (status === "unauthenticated") {
+            router.push("/auth");
+        }
+    }, [status, router]);
 
     return (
         <section className='nav'>

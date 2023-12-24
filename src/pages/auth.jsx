@@ -34,11 +34,10 @@ export async function getServerSideProps(context) {
                     message: "Error: Authentication failed!",
                 },
             };
-
+        // signing token to access hasura
         let dbToken = "Bearer " + signJwtToken(nextAuthToken);
-
+        // checking if the user exists in DB
         const user = await checkDbUser(nextAuthToken, dbToken);
-        console.log({ user });
         if (user) {
             // const decoded = validateJwtToken(dbToken);
             // const tokenWithId = signJwtToken();

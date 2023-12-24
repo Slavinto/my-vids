@@ -18,26 +18,55 @@ function printArr(arr) {
 }
 
 const Video = (props) => {
-    // console.log({ props });
     const router = useRouter();
     const { data: session, status } = useSession();
-    const [videoData, setVideoData] = useState({});
+    const [videoData, setVideoData] = useState(null);
 
     useEffect(() => {
+        if (status === "unauthenticated") router.push("/auth");
+    }, [status, router]);
+
+    // ==================================================
+    // check if current video is in db if no create a db entry
+    let blockDouble = false;
+    useEffect(() => {
+        if (blockDouble || videoData) return;
+        blockDouble = true;
         (async () => {
-            const response = await fetch("/api/myVideo", {
+            const response = await fetch(`/api/myVideo`, {
                 method: "POST",
-                body: JSON.stringify({ ...session }),
+                headers: {
+                    video_id: router.query.id,
+                },
             });
-            const data = await response.json();
+            const { data } = await response.json();
             setVideoData(data);
-            // console.log({ data });
         })();
-    }, [session]);
+    });
+    // ==================================================
+    // update a db entry for current video
+    useEffect(() => {
+        async function updateVideoData() {
+            if (!videoData) return;
+            videoData;
+            const response = await fetch(`/api/myVideo`, {
+                method: "POST",
+                headers: {
+                    video_id: router.query.id,
+                },
+                body: JSON.stringify({ videoData }),
+            });
+            const { data } = await response.json();
+            // setVideoData(data);
+        }
+        updateVideoData();
+    }, [videoData, router.query]);
 
-    if (!session || status !== "authenticated") router.push("/auth");
-
-    console.log({ session });
+    function handleSetVideoData(actionButtonsState) {
+        actionButtonsState.liked === videoData.liked
+            ? setVideoData({ ...videoData, liked: 0 })
+            : setVideoData({ ...videoData, ...actionButtonsState });
+    }
 
     const {
         id,
@@ -66,7 +95,10 @@ const Video = (props) => {
                 // style={customStyles}
             >
                 <div className='modal__player-container _container'>
-                    <ActionButtons />
+                    <ActionButtons
+                        actionButtonsState={videoData?.liked}
+                        setActionStateHandler={handleSetVideoData}
+                    />
                     <iframe
                         id='ytplayer'
                         className='modal__player'
@@ -117,16 +149,6 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
     const videoArr = await getVideoDetails(params.id);
-
-    // const response = await fetch(`${process.env.NEXTAUTH_URL}/api/myVideo`, {
-    //     method: "POST",
-    //     headers: {
-    //         "Content-Type": "application/json",
-    //     },
-    // });
-    // const data = await response.json();
-
-    // console.log({ data });
 
     return {
         props: { video: videoArr[0] },

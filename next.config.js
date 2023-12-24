@@ -18,6 +18,11 @@ const nextConfig = {
                 hostname: "yt3.ggpht.com",
                 pathname: "**",
             },
+            {
+                protocol: "https",
+                hostname: "play.google.com",
+                pathname: "**",
+            },
         ],
     },
 };
