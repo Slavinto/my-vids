@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar.component";
 import ActionButtons from "@/components/ActionButtons.component";
 import { useSession } from "next-auth/react";
 import { useState, useEffect } from "react";
+import { updateVideoData, insertVideoData } from "../../../lib/db/fetchDb";
 
 Modal.setAppElement("#__next");
 
@@ -19,6 +20,7 @@ function printArr(arr) {
 
 const Video = (props) => {
     const router = useRouter();
+    const videoId = router.query.id;
     const { data: session, status } = useSession();
     const [videoData, setVideoData] = useState(null);
 
@@ -28,46 +30,29 @@ const Video = (props) => {
 
     // ==================================================
     // check if current video is in db if no create a db entry
-    let blockDouble = false;
-    useEffect(() => {
-        if (blockDouble || videoData) return;
-        blockDouble = true;
-        (async () => {
-            const response = await fetch(`/api/myVideo`, {
-                method: "POST",
-                headers: {
-                    video_id: router.query.id,
-                },
-            });
-            const { data } = await response.json();
-            setVideoData(data);
-        })();
-    });
-    // ==================================================
-    // update a db entry for current video
-    useEffect(() => {
-        async function updateVideoData() {
-            if (!videoData) return;
-            videoData;
-            const response = await fetch(`/api/myVideo`, {
-                method: "POST",
-                headers: {
-                    video_id: router.query.id,
-                },
-                body: JSON.stringify({ videoData }),
-            });
-            const { data } = await response.json();
-            // setVideoData(data);
-        }
-        updateVideoData();
-    }, [videoData, router.query]);
 
-    function handleSetVideoData(actionButtonsState) {
-        actionButtonsState.liked === videoData.liked
-            ? setVideoData({ ...videoData, liked: 0 })
-            : setVideoData({ ...videoData, ...actionButtonsState });
+    // ==================================================
+    // update a db entry for current video when videoData changes
+    let doubleFetch = false;
+    useEffect(() => {
+        if (videoData || doubleFetch) return;
+        (async () => {
+            doubleFetch = true;
+            setVideoData(await insertVideoData(videoId));
+        })();
+    }, []);
+
+    async function handleSetVideoData(actionButtonsState) {
+        if (!videoData) return;
+        const newData =
+            actionButtonsState.liked === videoData?.liked
+                ? { ...videoData, liked: 0, watched: true }
+                : { ...videoData, ...actionButtonsState, watched: true };
+        console.log({ newData });
+        setVideoData(await updateVideoData(newData));
     }
 
+    console.log({ videoData });
     const {
         id,
         title,
@@ -105,7 +90,7 @@ const Video = (props) => {
                         type='text/html'
                         width='100%'
                         height='360'
-                        src={`http://www.youtube.com/embed/${id}?autoplay=0&controls=0`}
+                        src={`http://www.youtube.com/embed/${videoId}?autoplay=0&controls=0`}
                         frameBorder='0'
                     ></iframe>
                 </div>
