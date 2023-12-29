@@ -55,6 +55,7 @@ const Card = ({ id, sideEl, imgUrl = defaultImgUrl, size = "medium" }) => {
             <figure className={`card__image-container -${size}`}>
                 <Image
                     src={imgPath}
+                    // src={imgUrl}
                     onError={handleImageError}
                     className='card__image'
                     alt='a film card'

@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import Modal from "react-modal";
+import Spinner from "@/components/Spinner.component";
 import { getVideoDetails } from "../../../lib/videos";
 import Navbar from "@/components/Navbar.component";
 import ActionButtons from "@/components/ActionButtons.component";
@@ -23,25 +24,39 @@ const Video = (props) => {
     const videoId = router.query.id;
     const { data: session, status } = useSession();
     const [videoData, setVideoData] = useState(null);
-
+    const [isLoading, setIsLoading] = useState(true);
+    // ==================================================
+    const {
+        video_id: id,
+        title,
+        channelTitle,
+        viewCount,
+        time,
+        imgUrl,
+        tags,
+        cast,
+        desc,
+    } = props.video;
+    // console.log({ id });
+    // ==================================================
     useEffect(() => {
         if (status === "unauthenticated") router.push("/auth");
     }, [status, router]);
 
     // ==================================================
     // check if current video is in db if no create a db entry
-
-    // ==================================================
-    // update a db entry for current video when videoData changes
     let doubleFetch = false;
     useEffect(() => {
         if (videoData || doubleFetch) return;
         (async () => {
             doubleFetch = true;
-            setVideoData(await insertVideoData(videoId));
+            setVideoData(await insertVideoData(id));
+            if (isLoading) setIsLoading(false);
         })();
     }, []);
 
+    // ==================================================
+    // update a db entry for current video when videoData changes
     async function handleSetVideoData(actionButtonsState) {
         if (!videoData) return;
         const newData =
@@ -52,21 +67,9 @@ const Video = (props) => {
         setVideoData(await updateVideoData(newData));
     }
 
-    console.log({ videoData });
-    const {
-        id,
-        title,
-        channelTitle,
-        viewCount,
-        time,
-        imgUrl,
-        tags,
-        cast,
-        desc,
-    } = props.video;
-
     return (
         <div className='_wrapper _container modal__wrapper'>
+            {isLoading && <Spinner />}
             <Navbar />
             <Modal
                 isOpen={true}

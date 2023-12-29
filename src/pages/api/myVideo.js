@@ -2,7 +2,7 @@ import {
     checkDbUserVideo,
     insertOrUpdateDbVideo,
 } from "../../../lib/db/hasura";
-import { signJwtToken, validateJwtToken } from "../../../lib/jwt";
+import { validateJwtToken } from "../../../lib/jwt";
 
 const myVideo = async (req, res) => {
     if (req.method !== "POST")

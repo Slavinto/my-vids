@@ -38,11 +38,6 @@ export async function getServerSideProps(context) {
         let dbToken = "Bearer " + signJwtToken(nextAuthToken);
         // checking if the user exists in DB
         const user = await checkDbUser(nextAuthToken, dbToken);
-        if (user) {
-            // const decoded = validateJwtToken(dbToken);
-            // const tokenWithId = signJwtToken();
-            // console.log(decoded);
-        }
 
         setTokenCookie("hasura", dbToken, res);
         //==============================================
