@@ -1,0 +1,28 @@
+@use "partials" as p;
+
+.liked {
+    padding-top: 10rem;
+    width: 100%;
+    .cards {
+        @include p.mq(phablet, max) {
+            align-items: center;
+        }
+        &__container {
+            display: grid;
+            grid-template-columns: repeat(3, 3fr);
+            @include p.mq(tablet, max) {
+                grid-template-columns: repeat(2, 3fr);
+                gap: 2rem;
+                padding: 0rem 2rem;
+            }
+            @include p.mq(phablet, max) {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                padding: 0rem 8rem;
+            }
+        }
+        &__wrapper {
+        }
+    }
+}

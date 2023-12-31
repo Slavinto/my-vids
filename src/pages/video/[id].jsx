@@ -26,6 +26,12 @@ const Video = (props) => {
     const [videoData, setVideoData] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     // ==================================================
+    // ==================================================
+    useEffect(() => {
+        if (status === "unauthenticated") router.push("/auth");
+    }, [status, router]);
+
+    // ==================================================
     const {
         video_id: id,
         title,
@@ -37,13 +43,6 @@ const Video = (props) => {
         cast,
         desc,
     } = props.video;
-    // console.log({ id });
-    // ==================================================
-    useEffect(() => {
-        if (status === "unauthenticated") router.push("/auth");
-    }, [status, router]);
-
-    // ==================================================
     // check if current video is in db if no create a db entry
     let doubleFetch = false;
     useEffect(() => {
@@ -63,7 +62,6 @@ const Video = (props) => {
             actionButtonsState.liked === videoData?.liked
                 ? { ...videoData, liked: 0, watched: true }
                 : { ...videoData, ...actionButtonsState, watched: true };
-        console.log({ newData });
         setVideoData(await updateVideoData(newData));
     }
 
@@ -137,7 +135,14 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
     const videoArr = await getVideoDetails(params.id);
-
+    if (videoArr.length === 0)
+        return {
+            redirect: {
+                destination: "/",
+                permanent: false,
+            },
+            props: { video: null },
+        };
     return {
         props: { video: videoArr[0] },
         revalidate: 10,

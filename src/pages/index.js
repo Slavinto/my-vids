@@ -2,7 +2,6 @@ import Head from "next/head";
 import Banner from "@/components/Banner.component";
 import Navbar from "@/components/Navbar.component";
 import Cards from "@/components/Cards.component";
-import { signJwtToken } from "../../lib/jwt";
 import { getWatchItAgainVideosByUser } from "../../lib/db/hasura";
 
 import {
@@ -11,7 +10,7 @@ import {
     getOfflineVideos,
     getVideoDetails,
 } from "../../lib/videos";
-import { getToken } from "next-auth/jwt";
+import redirectUser from "@/utils/redirectUser";
 
 export async function getServerSideProps(context) {
     try {
@@ -19,17 +18,14 @@ export async function getServerSideProps(context) {
         const isDev = process.env.NODE_ENV === "development";
         //==============================================
         let props = {};
-        const { req, res } = context;
-        const nextAuthTokenData = await getToken({ req });
-        console.log(req.cookies);
-        if (!nextAuthTokenData) {
-            return {
-                redirect: {
-                    destination: "/auth",
-                    permanent: false,
-                },
-                props: {},
-            };
+        const {
+            nextAuthTokenData,
+            dbToken,
+            redirect = null,
+            error = null,
+        } = await redirectUser(context);
+        if (redirect || error) {
+            return { redirect };
         }
         const queries = [
             "Disney trailers",
@@ -68,8 +64,7 @@ export async function getServerSideProps(context) {
 
         //==============================================
         // watch it again section
-        // signing token to access hasura
-        let dbToken = "Bearer " + signJwtToken(nextAuthTokenData);
+
         // get 25 last-viewed videos from database
         const watchItAgainVideos = await getWatchItAgainVideosByUser(
             nextAuthTokenData,
@@ -102,9 +97,6 @@ export default function Home({
     popularVideos,
     watchItAgainVideos,
 }) {
-    // console.log({ ...travelVideos });
-    // console.log({ ...watchItAgainVideos });
-    // console.log("homepage");
     return (
         <>
             <Head>

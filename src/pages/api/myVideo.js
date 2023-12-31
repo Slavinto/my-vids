@@ -14,11 +14,7 @@ const myVideo = async (req, res) => {
         const bearerToken = req.cookies["hasura-token"];
         const token = bearerToken?.split("Bearer ")[1];
         // getting currently open video id
-        // const { video_id: videoId } = req.headers;
-        console.log({ body: req.body });
-        // const videoData = Object.keys(req.body).length !== 0 ? req.body : null;
         const videoData = req.body;
-        console.log({ videoData });
         const { video_id: videoId } = videoData;
 
         if (!token)
@@ -37,7 +33,6 @@ const myVideo = async (req, res) => {
             Object.keys(videoData).length > 1
                 ? await insertOrUpdateDbVideo("update", videoData, bearerToken)
                 : await checkDbUserVideo(user_data, videoId, bearerToken);
-        console.log({ result });
         if (result?.errors) {
             return res.status(500).json({
                 message: "Error.",

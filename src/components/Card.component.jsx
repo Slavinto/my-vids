@@ -17,7 +17,7 @@ const Card = ({ id, sideEl, imgUrl = defaultImgUrl, size = "medium" }) => {
 
     const handleImageError = (e) => {
         e.preventDefault();
-        console.log("error detected");
+        console.error("Error handling image in Card component.");
         setImgPath(defaultImgUrl);
     };
 

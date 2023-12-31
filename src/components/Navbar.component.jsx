@@ -11,7 +11,6 @@ const Navbar = (props) => {
     const router = useRouter();
     const { data, status } = useSession();
 
-    // if (!router) return;
     if (status === "authenticated" && !user) setUser(data.user);
 
     const handleClickHome = (e) => {
@@ -21,7 +20,7 @@ const Navbar = (props) => {
 
     const handleClickMyList = (e) => {
         e.preventDefault();
-        router.push("/browse/my-list");
+        router.push("/video/my-list");
     };
 
     const handleClickUser = (e) => {
@@ -32,12 +31,14 @@ const Navbar = (props) => {
     const handleClickSignOut = (e) => {
         e.preventDefault();
         signOut();
+        // remove hasura cookie
     };
 
     useEffect(() => {
         if (status === "unauthenticated") {
             router.push("/auth");
         }
+        // console.log(document.cookie);
     }, [status, router]);
 
     return (

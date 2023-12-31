@@ -3,9 +3,10 @@
 @use "defaults";
 
 // pages
-@use "pages-index";
 @use "auth";
 @use "[id]" as id;
+@use "my-list";
+@use "pages-index";
 
 // components
 @use "ActionButtons.style";

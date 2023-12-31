@@ -2,13 +2,10 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-
 import { signIn } from "next-auth/react";
-
-import { getToken } from "next-auth/jwt";
 import { checkDbUser } from "../../lib/db/hasura";
-import { signJwtToken, validateJwtToken } from "../../lib/jwt";
 import { setTokenCookie } from "../../lib/cookies";
+import redirectUser from "@/utils/redirectUser";
 
 const validateEmail = (email) => {
     const emailNorm = String(email).toLowerCase();
@@ -22,38 +19,34 @@ const validateEmail = (email) => {
 
 export async function getServerSideProps(context) {
     try {
-        const { req, res } = context;
-        //==============================================
-        const nextAuthToken = await getToken({
-            req,
-        });
+        const { nextAuthTokenData, dbToken } = await redirectUser(context);
 
-        if (!nextAuthToken)
+        if (!nextAuthTokenData || !dbToken) {
             return {
                 props: {
-                    message: "Error: Authentication failed!",
+                    message: "Something went wrong. Authorization error.",
                 },
             };
-        // signing token to access hasura
-        let dbToken = "Bearer " + signJwtToken(nextAuthToken);
+        }
         // checking if the user exists in DB
-        const user = await checkDbUser(nextAuthToken, dbToken);
+        const user = await checkDbUser(nextAuthTokenData, dbToken);
 
-        setTokenCookie("hasura", dbToken, res);
+        if (!user?.user_email) {
+            return {
+                props: {
+                    user: user?.message || "Can not access database.",
+                },
+            };
+        }
+        setTokenCookie("hasura", dbToken, context.res);
         //==============================================
-        return user?.user_email
-            ? {
-                  redirect: {
-                      destination: "/",
-                      permanent: false,
-                  },
-                  props: {},
-              }
-            : {
-                  props: {
-                      user: user?.message || null,
-                  },
-              };
+        return {
+            redirect: {
+                destination: "/",
+                permanent: false,
+            },
+            props: {},
+        };
     } catch (error) {
         console.error("Error: " + error.message);
         return {
@@ -76,9 +69,6 @@ const Auth = (props) => {
             "Something went wrong during login: " + props?.user?.message
         );
     }
-    // console.log({ ...props });
-
-    console.log("auth component rendering");
 
     const handleAuthSubmit = async (e) => {
         e.preventDefault();

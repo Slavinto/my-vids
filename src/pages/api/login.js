@@ -11,7 +11,6 @@ const login = async (req, res) => {
         // getting login(email) from request headers
 
         // const { login, name } = req?.headers;
-        console.log({ ...req.body });
         if (!login) {
             // exit if no email login provided
             return res.status(400).json({ message: "Error - invalid login!" });
